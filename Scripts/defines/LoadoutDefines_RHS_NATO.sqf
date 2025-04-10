@@ -30,572 +30,410 @@ private _unitType = (typeOf _unit);
 switch (_unitType) do {
     case "B_Soldier_SL_F": {
         _loadout = [
-            ["arifle_MX_Black_F", "", "acc_pointer_IR", "optic_Hamr", ["30Rnd_65x39_caseless_black_mag", 30], [], ""],
+            ["rhs_weap_m4a1_blockII_M203_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG_d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],["rhs_mag_M433_HEDP",1],"rhsusf_acc_grip_m203_d"],
+            ["rhs_weap_M136_hp","","","",["rhs_m136_hp_mag",1],[],""],
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_acu_oefcp",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
+                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]
+            ]],
+            ["rhsusf_iotv_ocp_Squadleader",[
+                ["rhsusf_ANPVS_14",1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",6,30],["rhs_mag_M433_HEDP",3,1],["rhs_mag_M397_HET",4,1],["rhs_mag_m576",2,1],["rhs_mag_m713_Red",2,1],
+                ["rhs_mag_m714_White",1,1],["rhs_mag_m715_Green",1,1]
+            ]],
             [],
-            ["hgun_P07_F", "", "", "", ["16Rnd_9x21_Mag", 17], [], ""],
-            ["U_B_CombatUniform_mcam",[
-                ["FirstAidKit", 2],
-                ["SmokeShellBlue", 2, 1],
-                ["HandGrenade", 1, 1]
-            ]],
-            ["V_TacVestIR_blk", [
-                ["30Rnd_65x39_caseless_black_mag", 4, 30],
-                ["30Rnd_65x39_caseless_black_mag_Tracer", 1, 30],
-                ["16Rnd_9x21_Mag", 3, 17],
-                ["SmokeShellBlue", 2, 1]
-            ]],
-            ["B_AssaultPack_rgr", [
-                ["Medikit", 1],
-                ["FirstAidKit", 20]
-            ]],
-            "H_HelmetB_light",
-            "",
-            [],
-            ["ItemMap", "ItemGPS", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles"]
+            "rhsusf_ach_helmet_headset_ocp","G_Aviator",
+            ["UK3CB_BAF_Soflam_Laserdesignator","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_medic_F": {
         _loadout = [
-            ["arifle_MX_Black_F", "", "acc_pointer_IR", "optic_Hamr", ["30Rnd_65x39_caseless_black_mag", 30], [], ""],
+            ["rhs_weap_m4a1_blockII_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15_top","rhsusf_acc_eotech_552_d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],"rhsusf_acc_rvg_de"],
             [],
-            ["hgun_P07_F", "", "", "", ["16Rnd_9x21_Mag", 17], [], ""],
-            ["U_B_CombatUniform_mcam",[
-                ["FirstAidKit", 2],
-                ["SmokeShellBlue", 2, 1],
-                ["HandGrenade", 1, 1]
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_acu_oefcp",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],
+                ["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]
             ]],
-            ["V_TacVestIR_blk", [
-                ["30Rnd_65x39_caseless_black_mag", 4, 30],
-                ["30Rnd_65x39_caseless_black_mag_Tracer", 1, 30],
-                ["16Rnd_9x21_Mag", 3, 17],
-                ["SmokeShellBlue", 2, 1]
+            ["rhsusf_iotv_ocp_Medic",[
+                ["rhsusf_ANPVS_14",1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",6,30]
             ]],
-            ["B_AssaultPack_rgr", [
-                ["Medikit", 1],
-                ["FirstAidKit", 20]
+            ["rhsusf_assault_eagleaiii_ocp",[
+                ["ACE_bloodIV",2],["ACE_bloodIV_500",3],["ACE_bloodIV_250",4],["ACE_plasmaIV",2],["ACE_plasmaIV_500",3],["ACE_plasmaIV_250",4],["ACE_salineIV",2],["ACE_salineIV_500",3],["ACE_salineIV_250",4],
+                ["ACE_quikclot",20],["ACE_elasticBandage",20],["ACE_packingBandage",20],["ACE_morphine",10],["ACE_epinephrine",10],["ACE_tourniquet",3],["ACE_surgicalKit",1],["ACE_personalAidKit",1],["ACE_splint",10]
             ]],
-            "H_HelmetB_light",
-            "",
-            [],
-            ["ItemMap", "ItemGPS", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles"]
+            "rhsusf_ach_helmet_headset_ocp","rhsusf_shemagh2_tan",
+            ["rhsusf_bino_m24","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
+            
         ];
     };
 
     case "B_soldier_repair_F": {
         _loadout = [
-            ["arifle_MX_Black_F", "", "acc_pointer_IR", "optic_Hamr", ["30Rnd_65x39_caseless_black_mag", 30], [], ""],
+            ["rhs_weap_m4a1_blockII_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15_top","rhsusf_acc_eotech_552_d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],"rhsusf_acc_rvg_de"],
             [],
-            ["hgun_P07_F", "", "", "", ["16Rnd_9x21_Mag", 17], [], ""],
-            ["U_B_CombatUniform_mcam", [
-                ["FirstAidKit", 2],
-                ["HandGrenade", 1, 1],
-                ["SmokeShellBlue", 2, 1]
-            ]],
-            ["V_PlateCarrier1_rgr", [
-                ["30Rnd_65x39_caseless_black_mag", 4, 30],
-                ["30Rnd_65x39_caseless_black_mag_Tracer", 1, 30],
-                ["16Rnd_9x21_Mag", 3, 17]
-            ]],
-            ["B_AssaultPack_khk", [
-                ["ToolKit", 1]
-            ]],
-            "H_HelmetB_light_desert",
-            "",
-            [],
-            ["ItemMap", "", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles"]
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_acu_oefcp",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],
+                ["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]
+                ]],
+            ["rhsusf_iotv_ocp_Repair",[
+                ["rhsusf_ANPVS_14",1],["ACE_DefusalKit",1],["ACE_EntrenchingTool",1],["ACE_wirecutter",1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",6,30]
+                ]],
+            ["rhsusf_falconii_mc",[
+                ["ToolKit",1]
+                ]],
+            "rhsusf_ach_helmet_headset_ocp","rhsusf_shemagh_gogg_tan",
+            ["rhsusf_bino_m24","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_soldier_AR_F": {
         _loadout = [
-            ["LMG_Mk200_F", "", "acc_pointer_IR", "optic_Hamr", ["200Rnd_65x39_cased_Box", 200], [], "bipod_01_F_blk"],
+            ["rhs_weap_m249_light_L","rhsusf_acc_SFMB556","rhsusf_acc_anpeq15side_bk","rhsusf_acc_ACOG_RMR",["rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote",200],[],"rhsusf_acc_grip4_bipod"],
             [],
-            ["hgun_P07_F", "", "", "", ["16Rnd_9x21_Mag", 17], [], ""],
-            ["U_B_CombatUniform_mcam", [
-                ["FirstAidKit", 2],
-                ["HandGrenade", 1, 1],
-                ["SmokeShellBlue", 2, 1]
-            ]],
-            ["V_Chestrig_rgr", [
-                ["200Rnd_65x39_cased_Box", 2, 200],
-                ["16Rnd_9x21_Mag", 3, 17]
-            ]],
-            ["B_AssaultPack_khk", [
-                ["200Rnd_65x39_cased_Box_Tracer", 2, 200]
-            ]],
-            "H_HelmetB_light_snakeskin",
-            "",
-            ["Binocular", "", "", "", [], [], ""],
-            ["ItemMap", "", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles"]
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_acu_oefcp",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
+                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]
+                ]],
+            ["rhsusf_iotv_ocp_SAW",[
+                ["rhsusf_ANPVS_14",1],["ACE_EntrenchingTool",1],["rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote",2,200]
+                ]],
+            [],
+            "rhsusf_ach_helmet_headset_ocp","rhsusf_shemagh_tan",
+            ["rhsusf_bino_m24","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_Soldier_GL_F": {
         _loadout = [
-            ["arifle_MX_GL_Black_F", "", "acc_pointer_IR", "optic_Hamr", ["30Rnd_65x39_caseless_black_mag", 30], ["1Rnd_HE_Grenade_shell", 1], ""],
+            ["rhs_weap_m4a1_blockII_M203_d","rhsusf_acc_SFMB556","rhsusf_acc_anpeq15side","rhsusf_acc_eotech_552_d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],["rhs_mag_M397_HET",1],"rhsusf_acc_grip_m203_d"],
             [],
-            ["hgun_P07_F", "", "", "", ["16Rnd_9x21_Mag", 17], [], ""],
-            ["U_B_CombatUniform_mcam", [
-                ["FirstAidKit", 2],
-                ["SmokeShellBlue", 2, 1],
-                ["HandGrenade", 1, 1],
-                ["Laserbatteries", 1, 1]
-            ]],
-            ["V_PlateCarrierIAGL_oli", [
-                ["30Rnd_65x39_caseless_black_mag", 4, 30],
-                ["30Rnd_65x39_caseless_black_mag_Tracer", 1, 30],
-                ["16Rnd_9x21_Mag", 3, 17]
-            ]],
-            ["B_AssaultPack_khk", [
-                ["1Rnd_HE_Grenade_shell", 10, 1],
-                ["1Rnd_Smoke_Grenade_shell", 2, 1],
-                ["1Rnd_SmokeBlue_Grenade_shell", 3, 1],
-                ["1Rnd_SmokeOrange_Grenade_shell", 2, 1],
-                ["1Rnd_SmokePurple_Grenade_shell", 2, 1],
-                ["1Rnd_SmokeYellow_Grenade_shell", 2, 1],
-                ["1Rnd_SmokeGreen_Grenade_shell", 2, 1]
-            ]],
-            "H_HelmetSpecB_snakeskin",
-            "",
-            ["Laserdesignator", "", "", "", ["Laserbatteries", 1], [], ""],
-            ["ItemMap", "ItemGPS", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles"]
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_acu_oefcp",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
+                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]
+                ]],
+            ["rhsusf_iotv_ocp_Grenadier",[
+                ["rhsusf_ANPVS_14",1],["ACE_HuntIR_monitor",1],["rhs_mag_M397_HET",4,1],["rhs_mag_M433_HEDP",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",3,30],["ACE_HuntIR_M203",2,1],["rhs_mag_m713_Red",1,1],
+                ["rhs_mag_m714_White",2,1],["rhs_mag_m715_Green",1,1]
+                ]],
+            [],
+            "rhsusf_ach_helmet_headset_ocp","rhsusf_shemagh2_tan",
+            ["rhsusf_bino_m24","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_soldier_M_F": {
         _loadout = [
-            ["srifle_EBR_F", "", "acc_pointer_IR", "optic_DMS", ["20Rnd_762x51_Mag", 20], [], "bipod_01_F_blk"],
+            ["rhs_weap_sr25_ec_d","rhsgref_sdn6_suppressor","","rhsusf_acc_M8541_mrds",["rhsusf_20Rnd_762x51_SR25_m993_Mag",20],[],"rhsusf_acc_harris_bipod"],
             [],
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_acu_oefcp",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
+                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]]],["rhsusf_iotv_ocp_Rifleman",[["rhsusf_ANPVS_14",1],["rhsusf_20Rnd_762x51_SR25_m993_Mag",7,20],["rhsusf_mag_17Rnd_9x19_FMJ",1,17]
+                ]],
             [],
-            ["U_B_CombatUniform_mcam", [
-                ["FirstAidKit", 2],
-                ["HandGrenade", 1, 1],
-                ["SmokeShellBlue", 2, 1],
-                ["Laserbatteries", 1, 1]
-            ]],
-            ["V_PlateCarrier1_rgr", [
-                ["20Rnd_762x51_Mag", 7, 20],
-                ["16Rnd_9x21_Mag", 3, 17]
-            ]],
-            [],
-            "H_HelmetB_camo",
-            "",
-            ["Laserdesignator", "", "", "", ["Laserbatteries", 1], [], ""],
-            ["ItemMap", "", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles"]
+            "rhsusf_ach_helmet_headset_ocp","",
+            ["ACE_VectorDay","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_soldier_AT_F": {
         _loadout = [
-            ["arifle_MXC_Black_F", "", "acc_pointer_IR", "optic_Hamr", ["30Rnd_65x39_caseless_black_mag", 30], [], ""],
-            ["launch_B_Titan_short_F", "", "", "", ["Titan_AT", 1], [], ""],
-            ["hgun_P07_F", "", "", "", ["16Rnd_9x21_Mag", 17], [], ""],
-            ["U_B_CombatUniform_mcam", [
-                ["FirstAidKit", 2],
-                ["HandGrenade", 1, 1],
-                ["SmokeShellBlue", 2, 1]
-            ]],
-            ["V_PlateCarrier1_rgr", [
-                ["30Rnd_65x39_caseless_black_mag", 5, 30],
-                ["16Rnd_9x21_Mag", 3, 17]
-            ]],
-            ["B_Kitbag_rgr", [
-                ["Titan_AT", 2, 1],
-                ["Titan_AP", 1, 1]
-            ]],
-            "H_HelmetB_light",
-            "",
+            ["rhs_weap_m4a1_blockII_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15_top","rhsusf_acc_ACOG_d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],"rhsusf_acc_rvg_de"],
+            ["UK3CB_BAF_Javelin_Slung_Tube","","","",[],[],""],
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_acu_oefcp",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
+                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]]],["rhsusf_iotv_ocp_Rifleman",[["rhsusf_ANPVS_14",1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",6,30]
+                ]],
             [],
-            ["ItemMap", "", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles"]
+            "rhsusf_ach_helmet_headset_ocp","rhs_googles_black",
+            ["UK3CB_BAF_Javelin_CLU","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_soldier_LAT_F": {
         _loadout = [
-            ["arifle_MX_Black_F", "", "acc_pointer_IR", "optic_Hamr", ["30Rnd_65x39_caseless_black_mag", 30], [], ""],
-            ["launch_NLAW_F", "", "", "", ["NLAW_F", 1], [], ""],
-            ["hgun_P07_F", "", "", "", ["16Rnd_9x21_Mag", 17], [], ""],
-            ["U_B_CombatUniform_mcam", [
-                ["FirstAidKit", 2],
-                ["SmokeShellBlue", 2, 1],
-                ["HandGrenade", 1, 1]
-            ]],
-            ["V_PlateCarrier2_rgr", [
-                ["30Rnd_65x39_caseless_black_mag", 5, 30],
-                ["16Rnd_9x21_Mag", 3, 17]
-            ]],
-            ["B_Kitbag_rgr", [
-                ["NLAW_F", 2, 1]
-            ]],
-            "H_HelmetB_light",
-            "",
-            [],
-            ["ItemMap", "", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles"]
+            ["rhs_weap_m4a1_blockII_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15_top","rhsusf_acc_ACOG_d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],"rhsusf_acc_rvg_de"],
+            ["ACE_launch_NLAW_ready_F","","","",["NLAW_F",1],[],""],
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_acu_oefcp",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
+                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]]],["rhsusf_iotv_ocp_Rifleman",[["rhsusf_ANPVS_14",1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",6,30]
+                ]],
+                [],
+                "rhsusf_ach_helmet_headset_ocp","G_Bandanna_tan",
+                ["rhsusf_bino_m24","","","",[],[],""],
+                ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_Soldier_TL_F": {
         _loadout = [
-            ["arifle_MX_GL_Black_F", "", "acc_pointer_IR", "optic_Hamr", ["30Rnd_65x39_caseless_black_mag", 30], ["1Rnd_HE_Grenade_shell", 1], ""],
+            ["rhs_weap_m4a1_blockII_M203_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG_d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],["rhs_mag_M433_HEDP",1],"rhsusf_acc_grip_m203_d"],
+            ["rhs_weap_M136_hp","","","",["rhs_m136_hp_mag",1],[],""],
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_acu_oefcp",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
+                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]
+                ]],
+            ["rhsusf_iotv_ocp_Teamleader",[
+                ["rhsusf_ANPVS_14",1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",6,30],["rhs_mag_M433_HEDP",3,1],["rhs_mag_M397_HET",4,1],["rhs_mag_m576",2,1],["rhs_mag_m713_Red",2,1],["rhs_mag_m714_White",1,1],
+                ["rhs_mag_m715_Green",1,1]
+                ]],
             [],
-            ["hgun_P07_F", "", "", "", ["16Rnd_9x21_Mag", 17], [], ""],
-            ["U_B_CombatUniform_mcam", [
-                ["FirstAidKit", 2],
-                ["SmokeShellBlue", 2, 1],
-                ["HandGrenade", 1, 1],
-                ["Laserbatteries", 1, 1]
-            ]],
-            ["V_PlateCarrier1_rgr", [
-                ["DemoCharge_Remote_Mag", 2, 1],
-                ["30Rnd_65x39_caseless_black_mag", 5, 30],
-                ["16Rnd_9x21_Mag", 3, 17]
-            ]],
-            ["B_AssaultPack_khk", [
-                ["1Rnd_HE_Grenade_shell", 8, 1],
-                ["1Rnd_Smoke_Grenade_shell", 2, 1],
-                ["1Rnd_SmokeGreen_Grenade_shell", 2, 1],
-                ["1Rnd_SmokeBlue_Grenade_shell", 2, 1]
-            ]],
-            "H_HelmetB_light",
-            "",
-            ["Laserdesignator", "", "", "", ["Laserbatteries", 1], [], ""],
-            ["ItemMap", "ItemGPS", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles"]
+            "rhsusf_ach_helmet_headset_ocp","G_Bandanna_aviator",
+            ["UK3CB_BAF_Soflam_Laserdesignator","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_engineer_F": {
         _loadout = [
-            ["arifle_MX_Black_F", "", "acc_pointer_IR", "optic_Hamr", ["30Rnd_65x39_caseless_black_mag", 30], [], ""],
+            ["rhs_weap_m4a1_blockII_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15_top","rhsusf_acc_eotech_552_d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],"rhsusf_acc_rvg_de"],
             [],
-            ["hgun_P07_F", "", "", "", ["16Rnd_9x21_Mag", 17], [], ""],
-            ["U_B_CombatUniform_mcam", [
-                ["FirstAidKit", 2],
-                ["HandGrenade", 1, 1],
-                ["SmokeShellBlue", 2, 1]
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_acu_oefcp",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
+                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]
             ]],
-            ["V_PlateCarrier2_rgr", [
-                ["MineDetector", 1],
-                ["30Rnd_65x39_caseless_black_mag", 5, 30],
-                ["16Rnd_9x21_Mag", 3, 17]
-            ]],
-            ["B_AssaultPack_khk", [
-                ["ToolKit", 1],
-                ["DemoCharge_Remote_Mag", 2, 1],
-                ["ClaymoreDirectionalMine_Remote_Mag", 2, 1]
-            ]],
-            "H_HelmetSpecB_snakeskin",
-            "",
-            [],
-            ["ItemMap", "ItemGPS", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles"]
+            ["rhsusf_iotv_ocp_Repair",[
+                ["rhsusf_ANPVS_14",1],["ACE_DefusalKit",1],["ACE_EntrenchingTool",1],["ACE_wirecutter",1],["ACE_M26_Clacker",1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",6,30]
+                ]],
+            ["rhsusf_falconii_mc",[
+                ["ToolKit",1],["rhsusf_m112x4_mag",1,1],["rhsusf_m112_mag",2,1]
+                ]],
+            "rhsusf_ach_helmet_headset_ocp","rhsusf_shemagh_gogg_tan",
+            ["rhsusf_bino_m24","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_soldier_exp_F": {
         _loadout = [
-            ["arifle_MX_Black_F", "", "acc_pointer_IR", "optic_Hamr", ["30Rnd_65x39_caseless_black_mag", 30], [], ""],
+            ["rhs_weap_m4a1_blockII_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15_top","rhsusf_acc_eotech_552_d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],"rhsusf_acc_rvg_de"],
             [],
-            ["hgun_P07_F", "", "", "", ["16Rnd_9x21_Mag", 17], [], ""],
-            ["U_B_CombatUniform_mcam", [
-                ["FirstAidKit", 2],
-                ["HandGrenade", 1, 1],
-                ["SmokeShellBlue", 2, 1]
-            ]],
-            ["V_PlateCarrierIAGL_oli", [
-                ["MineDetector", 1],
-                ["30Rnd_65x39_caseless_black_mag", 5, 30],
-                ["16Rnd_9x21_Mag", 3, 17]
-            ]],
-            ["B_Kitbag_rgr", [
-                ["ToolKit", 1],
-                ["DemoCharge_Remote_Mag", 4, 1],
-                ["ClaymoreDirectionalMine_Remote_Mag", 2, 1],
-                ["APERSTripMine_Wire_Mag", 2, 1],
-                ["APERSBoundingMine_Range_Mag", 2, 1]
-            ]],
-            "H_HelmetSpecB_snakeskin",
-            "",
-            [],
-            ["ItemMap", "", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles"]
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_acu_oefcp",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],
+                ["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]
+                ]],
+            ["rhsusf_iotv_ocp_Repair",[
+                ["rhsusf_ANPVS_14",1],["ACE_DefusalKit",1],["ACE_EntrenchingTool",1],["ACE_wirecutter",1],["ACE_M26_Clacker",1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",6,30]
+                ]],
+            ["rhsusf_falconii_mc",[
+                ["rhsusf_m112x4_mag",2,1],["rhsusf_m112_mag",4,1]
+                ]],
+            "rhsusf_ach_helmet_headset_ocp","rhsusf_shemagh_gogg_tan",
+            ["rhsusf_bino_m24","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_sniper_F": {
         _loadout = [
-            ["srifle_LRR_camo_F", "", "", "optic_LRPS", ["7Rnd_408_Mag", 7], [], ""],
+            ["rhs_weap_XM2010_sa","rhsusf_acc_M2010S_sa","rhsusf_acc_anpeq15side","rhsusf_acc_premier_mrds",["rhsusf_5Rnd_300winmag_xm2010",5],[],"rhsusf_acc_harris_bipod"],
             [],
-            ["hgun_P07_F", "", "", "", ["16Rnd_9x21_Mag", 17], [], ""],
-            ["U_B_FullGhillie_ard", [
-                ["FirstAidKit", 2],
-                ["SmokeShellBlue", 2, 1],
-                ["HandGrenade", 1, 1]
-            ]],
-            ["V_PlateCarrier1_rgr", [
-                ["7Rnd_408_Mag", 7, 7],
-                ["16Rnd_9x21_Mag", 3, 17]
-            ]],
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["U_B_FullGhillie_sard",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
+                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1],["rhsusf_5Rnd_300winmag_xm2010",14,5]
+                ]],
+            ["rhsusf_iotv_ocp_Rifleman",[
+                ["rhsusf_ANPVS_14",1],["rhsusf_5Rnd_300winmag_xm2010",6,5],["rhs_mag_an_m8hc",3,1],["rhsusf_mag_17Rnd_9x19_JHP",3,17]
+                ]],
             [],
-            "",
-            "",
-            ["Laserdesignator", "", "", "", ["Laserbatteries", 1], [], ""],
-            ["ItemMap", "ItemGPS", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles"]
+            "rhsusf_ach_helmet_headset_ocp","G_Bandanna_tan",["ACE_VectorDay","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_spotter_F": {
         _loadout = [
-            ["arifle_MX_Black_F", "", "acc_pointer_IR", "optic_Hamr", [], [], ""],
+            ["rhs_weap_m4a1_blockII_M203_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG_d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],["rhs_mag_M433_HEDP",1],"rhsusf_acc_grip_m203_d"],
             [],
-            ["hgun_P07_F", "", "", "", ["16Rnd_9x21_Mag", 17], [], ""],
-            ["U_B_FullGhillie_ard", [
-                ["FirstAidKit", 2],
-                ["SmokeShellBlue", 2, 1],
-                ["HandGrenade", 1, 1],
-                ["Laserbatteries", 1, 1]
-            ]],
-            ["V_PlateCarrier2_rgr", [
-                ["30Rnd_65x39_caseless_black_mag", 4, 30],
-                ["30Rnd_65x39_caseless_black_mag_Tracer", 1, 30],
-                ["16Rnd_9x21_Mag", 3, 17]
-            ]],
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["U_B_FullGhillie_sard",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],
+                ["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1],["rhs_m136_hp_mag",1,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",1,30],["rhs_mag_m715_Green",1,1],["ACE_40mm_Flare_white",1,1],["ACE_Chemlight_IR",2,1]
+                ]],
+            ["rhsusf_iotv_ocp_Grenadier",[
+                ["rhsusf_ANPVS_14",1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",6,30],["rhs_mag_M433_HEDP",3,1],["rhs_mag_M397_HET",4,1],["rhs_mag_m576",2,1],["rhs_mag_m713_Red",1,1],["rhs_mag_m714_White",1,1]
+                ]],
             [],
-            "",
-            "",
-            ["Laserdesignator", "", "", "", ["Laserbatteries", 1], [], ""],
-            ["ItemMap", "ItemGPS", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles"]
+            "rhsusf_ach_helmet_headset_ocp","G_Bandanna_tan",["UK3CB_BAF_Soflam_Laserdesignator","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_support_Mort_F": {
         _loadout = [
-            ["arifle_MXC_Black_F", "", "acc_pointer_IR", "optic_Aco", ["30Rnd_65x39_caseless_black_mag", 30], [], ""],
+            ["rhs_weap_mk18_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15_top","rhsusf_acc_eotech_552_d",["rhs_mag_30Rnd_556x45_M855_Stanag",30],[],"rhsusf_acc_rvg_de"],
             [],
-            ["hgun_P07_F", "", "", "", ["16Rnd_9x21_Mag", 17], [], ""],
-            ["U_B_CombatUniform_mcam", [
-                ["FirstAidKit", 2],
-                ["SmokeShellBlue", 2, 1],
-                ["HandGrenade", 1, 1],
-                ["Laserbatteries", 1, 1]
-            ]],
-            ["V_PlateCarrier1_rgr", [
-                ["30Rnd_65x39_caseless_black_mag", 4, 30],
-                ["30Rnd_65x39_caseless_black_mag_Tracer", 1, 30],
-                ["16Rnd_9x21_Mag", 3, 17]
-            ]],
-            ["B_Mortar_01_weapon_F", []],
-            "H_HelmetB_light",
-            "",
-            ["Laserdesignator", "", "", "", ["Laserbatteries", 1], [], ""],
-            ["ItemMap", "ItemGPS", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles"]
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_acu_oefcp",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],
+                ["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]
+                ]],
+            ["rhsusf_iotv_ocp_Rifleman",[
+                ["rhsusf_ANPVS_14",1],["rhs_mag_30Rnd_556x45_M855_Stanag",3,30]
+                ]],
+            ["rhs_M252_Gun_Bag",[]],
+            "rhsusf_patrolcap_ocp","rhs_googles_black",
+            ["ACE_VectorDay","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_soldier_UAV_F": {
         _loadout = [
-            ["arifle_MXC_Black_F", "", "acc_pointer_IR", "optic_Aco", ["30Rnd_65x39_caseless_black_mag", 30], [], ""],
+            ["rhs_weap_mk18_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15_top","rhsusf_acc_eotech_552_d",["rhs_mag_30Rnd_556x45_M855_Stanag",30],[],"rhsusf_acc_rvg_de"],
             [],
-            ["hgun_P07_F", "", "", "", ["16Rnd_9x21_Mag", 17], [], ""],
-            ["U_B_CombatUniform_mcam", [
-                ["FirstAidKit", 2],
-                ["Laserbatteries", 1, 1],
-                ["SmokeShellBlue", 2, 1],
-                ["HandGrenade", 1, 1]
-            ]],
-            ["V_PlateCarrier1_rgr", [
-                ["30Rnd_65x39_caseless_black_mag", 4, 30],
-                ["30Rnd_65x39_caseless_black_mag_Tracer", 1, 30],
-                ["16Rnd_9x21_Mag", 3, 17]
-            ]],
-            ["B_UAV_01_backpack_F", []],
-            "H_HelmetB_light",
-            "",
-            ["Laserdesignator", "", "", "", ["Laserbatteries", 1], [], ""],
-            ["ItemMap", "B_UavTerminal", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles"]
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_acu_oefcp",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
+                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]]],["rhsusf_iotv_ocp_Rifleman",[["rhsusf_ANPVS_14",1],["rhs_mag_30Rnd_556x45_M855_Stanag",3,30]
+                ]],
+            ["rhs_M252_Gun_Bag",[]],
+            "rhsusf_patrolcap_ocp","rhs_googles_black",
+            ["ACE_VectorDay","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_Helipilot_F": {
         _loadout = [
-            ["SMG_01_F", "", "", "", ["30Rnd_45ACP_Mag_SMG_01", 25], [], ""],
+            ["rhsusf_weap_MP7A2","","","rhsusf_acc_eotech_xps3",["rhsusf_mag_40Rnd_46x30_FMJ",40],[],"rhsusf_acc_grip3"],
             [],
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["UK3CB_BAF_U_HeliPilotCoveralls_Army",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],
+                ["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]]],["UK3CB_BAF_V_Pilot_DDPM",[["rhsusf_ANPVS_14",1],["rhsusf_mag_40Rnd_46x30_FMJ",3,40]
+                ]],
             [],
-            ["U_B_HeliPilotCoveralls", [
-                ["FirstAidKit", 2],
-                ["SmokeShellBlue", 2, 1],
-                ["SmokeShellGreen", 2, 1],
-                ["Chemlight_blue", 2, 1],
-                ["Chemlight_green", 2, 1],
-                ["B_IR_Grenade", 1, 1]
-            ]],
-            ["V_TacVest_blk", [
-                ["ToolKit", 1],
-                ["30Rnd_45ACP_Mag_SMG_01", 2, 25]
-            ]],
-            [],
-            "H_CrewHelmetHeli_B",
-            "G_Bandanna_oli",
-            ["Binocular", "", "", "", [], [], ""],
-            ["ItemMap", "ItemGPS", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles_OPFOR"]
+            "rhsusf_hgu56p_visor","",["rhsusf_bino_m24","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_recon_TL_F": {
         _loadout = [
-            ["arifle_MX_GL_Black_F", "muzzle_snds_65_TI_blk_F", "acc_pointer_IR","optic_Nightstalker", ["30Rnd_65x39_caseless_black_mag", 30], ["1Rnd_HE_Grenade_shell", 1], ""],
+            ["rhs_weap_hk416d145_m320","rhsusf_acc_nt4_black","","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG",30],["rhs_mag_M433_HEDP",1],""],
+            ["rhs_weap_M136_hp","","","",[],[],""],
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_FROG01_wd",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
+                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]]],["rhsusf_spc_squadleader",[["rhsusf_ANPVS_15",1],["ACE_HuntIR_monitor",1],["rhs_mag_M433_HEDP",4,1],
+                ["rhs_mag_30Rnd_556x45_M855A1_PMAG",3,30],["rhs_mag_M397_HET",5,1],["ACE_HuntIR_M203",2,1],["ACE_40mm_Pike",1,1]
+                ]],
             [],
-            ["hgun_Pistol_heavy_01_F", "muzzle_snds_acp", "acc_flashlight_pistol", "", ["11Rnd_45ACP_Mag", 15], [], ""],
-            ["U_B_CTRG_3", [
-                ["FirstAidKit", 2],
-                ["SmokeShellBlue", 2, 1],
-                ["HandGrenade", 1, 1],
-                ["Laserbatteries", 1, 1]
-            ]],
-            ["V_PlateCarrierL_CTRG", [
-                ["DemoCharge_Remote_Mag", 2, 1],
-                ["30Rnd_65x39_caseless_black_mag", 5, 30],
-                ["11Rnd_45ACP_Mag", 3, 15],
-                ["1Rnd_HE_Grenade_shell", 5, 1]
-            ]],
-            [],
-            "H_Booniehat_khk_hs",
-            "G_Tactical_Clear",
-            ["Laserdesignator", "", "", "", ["Laserbatteries", 1], [], ""],
-            ["ItemMap", "ItemGPS", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles_OPFOR"]
+            "rhsusf_mich_helmet_marpatwd_alt_headset","rhsusf_shemagh_tan",
+            ["UK3CB_BAF_Soflam_Laserdesignator","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_recon_LAT_F": {
          _loadout = [
-            ["arifle_MX_Black_F", "muzzle_snds_65_TI_blk_F", "acc_pointer_IR", "optic_Nightstalker", ["30Rnd_65x39_caseless_black_mag", 30], [], ""],
-            ["launch_I_Titan_short_F", "", "", "", ["Titan_AT", 1], [], ""],
-            ["hgun_Pistol_heavy_01_F", "muzzle_snds_acp", "acc_flashlight_pistol", "optic_MRD", ["11Rnd_45ACP_Mag", 15], [], ""],
-            ["U_B_CTRG_3", [
-                ["FirstAidKit", 2],
-                ["SmokeShellBlue", 2, 1],
-                ["HandGrenade", 1, 1],
-                ["Laserbatteries", 1, 1]
-            ]],
-            ["V_PlateCarrierL_CTRG", [
-                ["30Rnd_65x39_caseless_black_mag", 5, 30],
-                ["11Rnd_45ACP_Mag", 3, 15]
-            ]],
-            ["B_Kitbag_rgr", [
-                ["Titan_AT", 2, 1]
-            ]],
-            "H_Booniehat_khk_hs",
-            "G_Tactical_Clear",
-            ["Laserdesignator", "", "", "", ["Laserbatteries", 1], [], ""],
-            ["ItemMap", "ItemGPS", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles_OPFOR"]
-        ];
+            ["rhs_weap_hk416d145","rhsusf_acc_nt4_black","","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG",30],[],"rhsusf_acc_rvg_blk"],
+            ["UK3CB_BAF_Javelin_Slung_Tube","","","",[],[],""],
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_FROG01_wd",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
+                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]
+                ]],
+            ["rhsusf_spc_rifleman",[["rhsusf_ANPVS_15",1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",6,30]]],
+            [],
+            "rhsusf_mich_helmet_marpatwd_alt_headset","rhsusf_shemagh_tan",
+            ["UK3CB_BAF_Javelin_CLU","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
+            ];
     };
 
     case "B_recon_M_F": {
          _loadout = [
-            ["arifle_MXM_Black_F", "muzzle_snds_65_TI_blk_F", "acc_pointer_IR", "optic_Nightstalker", ["30Rnd_65x39_caseless_black_mag", 30], [], ""],
+            ["UK3CB_BAF_L129A1","UK3CB_BAF_Silencer_L115A3","rhsusf_acc_anpeq15_bk","UK3CB_BAF_TA648_308",["UK3CB_BAF_762_L42A1_20Rnd",20],[],"UK3CB_underbarrel_acc_grippod"],
             [],
-            ["hgun_Pistol_heavy_01_F", "muzzle_snds_acp", "acc_flashlight_pistol", "optic_MRD", ["11Rnd_45ACP_Mag", 15], [], ""],
-            ["U_B_CTRG_3", [
-                ["FirstAidKit", 2],
-                ["SmokeShellBlue", 2, 1],
-                ["HandGrenade", 1, 1],
-                ["Laserbatteries", 1, 1]
-            ]],
-            ["V_PlateCarrierL_CTRG", [
-                ["30Rnd_65x39_caseless_black_mag", 7, 30],
-                ["11Rnd_45ACP_Mag", 3, 15]
-            ]],
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_FROG01_wd",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
+                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]
+                ]],
+            ["rhsusf_spc_rifleman",[
+                ["rhsusf_ANPVS_15",1],["rhsusf_mag_17Rnd_9x19_JHP",1,17],["UK3CB_BAF_762_L42A1_20Rnd",6,20]
+                ]],
             [],
-            "H_Booniehat_khk_hs",
-            "G_Tactical_Clear",
-            ["Laserdesignator", "", "", "", ["Laserbatteries", 1], [], ""],
-            ["ItemMap", "ItemGPS", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles_OPFOR"]
+            "rhsusf_mich_helmet_marpatwd_alt_headset","rhsusf_shemagh_tan",["UK3CB_BAF_Soflam_Laserdesignator","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_recon_medic_F": {
          _loadout = [
-            ["arifle_MX_Black_F", "muzzle_snds_65_TI_blk_F", "acc_pointer_IR", "optic_Nightstalker", ["30Rnd_65x39_caseless_black_mag", 30], [], ""],
+            ["rhs_weap_hk416d145","rhsusf_acc_nt4_black","","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG",30],[],"rhsusf_acc_rvg_blk"],
             [],
-            ["hgun_Pistol_heavy_01_F", "muzzle_snds_acp", "acc_flashlight_pistol", "optic_MRD", ["11Rnd_45ACP_Mag", 15], [], ""],
-            ["U_B_CTRG_3", [
-                ["SmokeShellBlue", 2, 1],
-                ["HandGrenade", 1, 1],
-                ["Laserbatteries", 1, 1]
-            ]],
-            ["V_PlateCarrierL_CTRG", [
-                ["30Rnd_65x39_caseless_black_mag", 5, 30],
-                ["11Rnd_45ACP_Mag", 3, 15],
-                ["SmokeShellYellow", 8, 1]
-            ]],
-            ["B_AssaultPack_rgr", [
-                ["Medikit", 1],
-                ["FirstAidKit", 8]
-            ]],
-            "H_Booniehat_khk_hs",
-            "G_Tactical_Clear",
-            ["Laserdesignator", "", "", "", ["Laserbatteries", 1], [], ""],
-            ["ItemMap", "ItemGPS", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles_OPFOR"]
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_FROG01_wd",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
+                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]
+                ]],
+            ["rhsusf_spc_rifleman",[
+                ["rhsusf_ANPVS_15",1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",6,30]
+                ]],
+            ["rhsusf_assault_eagleaiii_coy",[
+                ["ACE_elasticBandage",20],["ACE_quikclot",20],["ACE_bloodIV",2],["ACE_bloodIV_250",4],["ACE_bloodIV_500",3],["ACE_epinephrine",10],["ACE_morphine",10],["ACE_packingBandage",20],["ACE_personalAidKit",1],
+                ["ACE_plasmaIV",2],["ACE_plasmaIV_250",4],["ACE_plasmaIV_500",3],["ACE_salineIV",2],["ACE_salineIV_250",4],["ACE_salineIV_500",3],["ACE_splint",10],["ACE_surgicalKit",1],["ACE_tourniquet",4]
+                ]],
+            "rhsusf_mich_helmet_marpatwd_alt_headset","rhsusf_shemagh2_tan",["UK3CB_BAF_Soflam_Laserdesignator","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
     case "B_recon_exp_F": {
          _loadout = [
-            ["arifle_MX_Black_F", "muzzle_snds_65_TI_blk_F", "acc_pointer_IR", "optic_Nightstalker", ["30Rnd_65x39_caseless_black_mag", 30], [], ""],
+            ["rhs_weap_hk416d145","rhsusf_acc_nt4_black","","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG",30],[],"rhsusf_acc_rvg_blk"],
             [],
-            ["hgun_Pistol_heavy_01_F", "muzzle_snds_acp", "acc_flashlight_pistol", "optic_MRD", ["11Rnd_45ACP_Mag", 15], [], ""],
-            ["U_B_CTRG_3", [
-                ["SmokeShellBlue", 2, 1],
-                ["HandGrenade", 1, 1],
-                ["Laserbatteries", 1, 1]
-            ]],
-            ["V_PlateCarrierL_CTRG", [
-                ["30Rnd_65x39_caseless_black_mag", 5, 30],
-                ["11Rnd_45ACP_Mag", 3, 15],
-                ["SmokeShellYellow", 8, 1],
-                ["MineDetector", 1]
-            ]],
-            ["B_Kitbag_rgr", [
-                ["ToolKit", 1],
-                ["DemoCharge_Remote_Mag", 2, 1],
-                ["SatchelCharge_Remote_Mag", 1, 1],
-                ["ClaymoreDirectionalMine_Remote_Mag", 2, 1],
-                ["SLAMDirectionalMine_Wire_Mag", 2, 1]
-            ]],
-            "H_Booniehat_khk_hs",
-            "G_Tactical_Clear",
-            ["Laserdesignator", "", "", "", ["Laserbatteries", 1], [], ""],
-            ["ItemMap", "ItemGPS", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles_OPFOR"]
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_FROG01_wd",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
+                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]
+                ]],
+            ["rhsusf_spc_rifleman",[
+                ["rhsusf_ANPVS_15",1],["ACE_DefusalKit",1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",6,30]
+                ]],
+            ["rhsusf_falconii_coy",[
+                ["rhsusf_m112x4_mag",2,1],["rhsusf_m112_mag",4,1]
+                ]],
+            "rhsusf_mich_helmet_marpatwd_alt_headset","rhsusf_shemagh_tan",
+            ["UK3CB_BAF_Soflam_Laserdesignator","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
          ];
     };
 
     case "B_recon_JTAC_F": {
          _loadout = [
-            ["arifle_MX_GL_Black_F", "muzzle_snds_65_TI_blk_F", "acc_pointer_IR","optic_Nightstalker", ["30Rnd_65x39_caseless_black_mag", 30], ["1Rnd_HE_Grenade_shell", 1], ""],
+            ["rhs_weap_hk416d145","rhsusf_acc_nt4_black","","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG",30],[],"rhsusf_acc_rvg_blk"],
             [],
-            ["hgun_Pistol_heavy_01_F", "muzzle_snds_acp", "acc_flashlight_pistol", "optic_MRD", ["11Rnd_45ACP_Mag", 15], [], ""],
-            ["U_B_CTRG_3", [
-                ["SmokeShellBlue", 2, 1],
-                ["HandGrenade", 1, 1],
-                ["Laserbatteries", 1, 1]
-            ]],
-            ["V_PlateCarrierL_CTRG", [
-                ["30Rnd_65x39_caseless_black_mag", 5, 30],
-                ["11Rnd_45ACP_Mag", 3, 15],
-                ["1Rnd_HE_Grenade_shell", 7, 1]
-            ]],
-            ["B_Kitbag_rgr", [
-                ["1Rnd_SmokeRed_Grenade_shell", 8, 1],
-                ["UGL_FlareGreen_F", 4, 1],
-                ["UGL_FlareWhite_F", 4, 1],
-                ["UGL_FlareYellow_F", 4, 1],
-                ["1Rnd_SmokeYellow_Grenade_shell", 4, 1],
-                ["1Rnd_SmokeBlue_Grenade_shell", 4, 1],
-                ["1Rnd_SmokeGreen_Grenade_shell", 4, 1]
-            ]],
-            "H_Booniehat_khk_hs",
-            "G_Tactical_Clear",
-            ["Laserdesignator", "", "", "", ["Laserbatteries", 1], [], ""],
-            ["ItemMap", "ItemGPS", _radioItem, "ItemCompass", "ItemWatch", "NVGoggles_OPFOR"]
+            ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
+            ["rhs_uniform_FROG01_wd",[
+                ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
+                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]]],["rhsusf_spc_rifleman",[["rhsusf_ANPVS_15",1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",6,30]
+                ]],
+            ["B_RadioBag_01_black_F",[]],
+            "rhsusf_mich_helmet_marpatwd_alt_headset","rhsusf_shemagh_tan",
+            ["UK3CB_BAF_Soflam_Laserdesignator","","","",[],[],""],
+            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
          ];
     };
 
