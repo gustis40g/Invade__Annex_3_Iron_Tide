@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"sqf.enableACE3": true,
+		"sqflint.checkPaths": true
+	}
+}
