@@ -14,20 +14,20 @@ AW_OPFOR_side_rescuePilot_wreckType = "Land_UH1H_Wreck_F";
 AW_OPFOR_side_rescuePilot_pilotUniformVestHelmet = ["rhs_uniform_acu_oefcp", "rhsusf_spcs_ocp", "rhsusf_hgu56p"];
 
 AW_OPFOR_side_secureAsset_assets = [
-   [201, "O_Heli_Attack_02_dynamicLoadout_black_F"],
-   [202, "B_Heli_Attack_01_dynamicLoadout_F"],
-   [203, "O_Heli_Light_02_dynamicLoadout_F"],
-   [607, "O_MBT_02_cannon_F"],
-   [609, "I_MBT_03_cannon_F"],
-   [608, "O_MBT_04_cannon_F"],
-   [601, "O_MBT_04_command_F"],
-   [611, "B_MBT_01_TUSK_F"],
-   [710, "I_APC_Wheeled_03_cannon_F"],
-   [712, "B_APC_Wheeled_01_cannon_F"],
-   [801, "B_APC_Tracked_01_AA_F"],
-   [703, "I_LT_01_AT_F"],
-   [704, "I_LT_01_cannon_F"],
-   [901, "B_APC_Tracked_01_CRV_F"]
+   [203, "RHS_AH64D"],
+   [204, "rhs_mi28n_vvsc"],
+   [205, "rhsgref_mi24g_CAS"],
+   [607, "rhs_t90sm_tv"],
+   [603, "rhs_t90sm_tv"],
+   [609, "rhs_t80um"],
+   [708, "rhs_bmd4ma_vdv"],
+   [709, "rhs_bmd4ma_vdv"],
+   [710, "PRACS_Pizarro_SLE"],
+   [711, "rhs_bmd2m"],
+   [714, "rhs_bmd2m"],
+   [901, "PRACS_VEC_MGS"],
+   [802, "PRACS_SLA_2S6M_Tunguska"],
+   [904, "PRACS_BMR_ATGM_TOW"]
 ];
 
 AW_OPFOR_side_militiaCamp = [
