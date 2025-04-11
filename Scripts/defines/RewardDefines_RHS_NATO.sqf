@@ -85,7 +85,7 @@ InA_Rewards_RewardList = [
 
 // Reward blacklist
 InA_Rewards_RewardBlacklist = [
-
+    501 //UCAV Sentinel
 ];
 
 
