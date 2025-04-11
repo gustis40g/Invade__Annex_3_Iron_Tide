@@ -211,9 +211,9 @@ class Altis {
                     {"Land_Pod_Heli_Transport_04_repair_black_F", "term_pod3", 900},
 
                     {"rhsusf_mkvsoc", "term_boat1", 300},
-                    {"UK3CB_BAF_GunnerStatic_DDPM", "term_boat2", 180},
-                    {"rhsusf_mkvsoc", "term_boat3", 300},
-                    {"UK3CB_BAF_GunnerStatic_DDPM", "term_boat4", 180},
+                    {"rhsusf_mkvsoc", "term_boat2", 180},
+                    {"UK3CB_BAF_RHIB_HMG", "term_boat3", 300},
+                    {"UK3CB_BAF_RHIB_HMG", "term_boat4", 180},
 
                     {"B_Boat_Transport_01_F", "term_boat5", 120},
                     {"B_Boat_Transport_01_F", "term_boat6", 120},

@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=4869;
+		nextID=4875;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=16861;
+		nextID=16951;
 	};
 	class Camera
 	{
-		pos[]={28266.465,30.833035,3685.5706};
-		dir[]={0.81988329,-0.25248551,0.51408416};
-		up[]={0.21396446,0.96756303,0.13415973};
-		aside[]={0.53129131,-9.1444235e-07,-0.84732813};
+		pos[]={28145.951,33.619373,3682.531};
+		dir[]={0.87534428,-0.48348483,0.013740524};
+		up[]={0.48360828,0.87523472,0.0075880806};
+		aside[]={0.015698483,2.2475745e-06,-0.9999643};
 	};
 };
 binarizationWanted=0;
@@ -139,7 +139,7 @@ addons[]=
 	"A3_Structures_F_Ind_Shed",
 	"rhsusf_c_stryker",
 	"rhsusf_c_f22",
-	"rhsusf_c_ch53"
+	"A3_Air_F_Heli_Light_01"
 };
 class AddonsMetaData
 {
@@ -636,10 +636,10 @@ class AddonsMetaData
 		};
 		class Item70
 		{
-			className="rhsusf_c_ch53";
-			name="CH-53 Helicopter";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
+			className="A3_Air_F";
+			name="Arma 3 Alpha - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -4702,7 +4702,7 @@ class Mission
 										class Attribute0
 										{
 											property="groupID";
-											expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+											expression="if (isNil 'CBA_fnc_setCallsign') then {_this setGroupID [_value];} else {[_this, _value] call CBA_fnc_setCallsign;};";
 											class Value
 											{
 												class data
@@ -4818,7 +4818,7 @@ class Mission
 												{
 													class uniform
 													{
-														typeName="U_B_CombatUniform_mcam";
+														typeName="rhs_uniform_acu_oefcp";
 														isBackpack=0;
 														class MagazineCargo
 														{
@@ -4842,7 +4842,7 @@ class Mission
 													};
 													class vest
 													{
-														typeName="V_Rangemaster_belt";
+														typeName="rhsusf_iotv_ocp";
 														isBackpack=0;
 														class MagazineCargo
 														{
@@ -4873,11 +4873,11 @@ class Mission
 													radio="ItemRadio";
 													gps="ItemGPS";
 													goggles="G_Aviator";
-													headgear="H_MilCap_mcamo";
+													headgear="rhsusf_patrolcap_ocp";
 												};
 											};
 											id=2081;
-											type="B_officer_F";
+											type="rhsusf_army_ocp_officer";
 											class CustomAttributes
 											{
 												class Attribute0
@@ -5016,7 +5016,7 @@ class Mission
 												name="Quartermaster_2";
 											};
 											id=2029;
-											type="B_officer_F";
+											type="rhsusf_army_ocp_officer";
 											class CustomAttributes
 											{
 												class Attribute0
@@ -5191,7 +5191,7 @@ class Mission
 												name="Quartermaster_6";
 											};
 											id=4398;
-											type="B_officer_F";
+											type="rhsusf_army_ocp_officer";
 											class CustomAttributes
 											{
 												class Attribute0
@@ -5254,7 +5254,7 @@ class Mission
 												name="Quartermaster_7";
 											};
 											id=4400;
-											type="B_officer_F";
+											type="rhsusf_army_ocp_officer";
 											class CustomAttributes
 											{
 												class Attribute0
@@ -5319,7 +5319,7 @@ class Mission
 												{
 													class uniform
 													{
-														typeName="U_B_CombatUniform_mcam";
+														typeName="rhs_uniform_acu_oefcp";
 														isBackpack=0;
 														class MagazineCargo
 														{
@@ -5343,7 +5343,7 @@ class Mission
 													};
 													class vest
 													{
-														typeName="V_Rangemaster_belt";
+														typeName="rhsusf_iotv_ocp";
 														isBackpack=0;
 														class MagazineCargo
 														{
@@ -5374,11 +5374,11 @@ class Mission
 													radio="ItemRadio";
 													gps="ItemGPS";
 													goggles="G_Aviator";
-													headgear="H_MilCap_mcamo";
+													headgear="rhsusf_patrolcap_ocp";
 												};
 											};
 											id=4764;
-											type="B_officer_F";
+											type="rhsusf_army_ocp_officer";
 											class CustomAttributes
 											{
 												class Attribute0
@@ -17031,7 +17031,7 @@ class Mission
 							position[]={15141.92,17.903999,16992.277};
 							name="term_jet2";
 							type="Empty";
-							angle=223.89795;
+							angle=223.8979;
 							id=4857;
 							atlOffset=-0.00040054321;
 						};
@@ -17060,7 +17060,7 @@ class Mission
 							position[]={20823.703,27.925121,7269.9922};
 							name="BASE";
 							type="Empty";
-							angle=57.153206;
+							angle=57.153194;
 							id=1574;
 						};
 						class Item2
@@ -30695,12 +30695,12 @@ class Mission
 		class Item423
 		{
 			dataType="Marker";
-			position[]={15328.789,0,15780.58};
+			position[]={15319.63,0,15777.675};
 			name="term_boat1";
 			type="Empty";
-			angle=206.41824;
+			angle=238.4182;
 			id=4494;
-			atlOffset=9.0791426;
+			atlOffset=9.5280323;
 		};
 		class Item424
 		{
@@ -30745,12 +30745,12 @@ class Mission
 		class Item428
 		{
 			dataType="Marker";
-			position[]={15331.508,0,15774.506};
+			position[]={15325.739,-0.023810387,15766.949};
 			name="term_boat2";
 			type="Empty";
 			angle=214.14056;
 			id=4499;
-			atlOffset=9.8868361;
+			atlOffset=11.146419;
 		};
 		class Item429
 		{
@@ -30765,12 +30765,12 @@ class Mission
 		class Item430
 		{
 			dataType="Marker";
-			position[]={15336.55,0,15754.85};
+			position[]={15335.955,-0.00016403198,15753.321};
 			name="term_boat4";
 			type="Empty";
 			angle=207.97371;
 			id=4501;
-			atlOffset=12.155682;
+			atlOffset=12.287133;
 		};
 		class Item431
 		{
@@ -33495,8 +33495,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={28199.113,28.852242,3659.085};
-				angles[]={0,0.66914177,0};
+				position[]={28200.639,28.779953,3658.0967};
+				angles[]={-0,0.80285144,0};
 			};
 			side="Empty";
 			flags=4;
@@ -33505,9 +33505,9 @@ class Mission
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
-			id=4868;
-			type="rhsusf_CH53E_USMC_D";
-			atlOffset=0.072319031;
+			id=4874;
+			type="rhsusf_CH53e_USMC_D_cargo";
+			atlOffset=3.8146973e-06;
 			class CustomAttributes
 			{
 				class Attribute0
