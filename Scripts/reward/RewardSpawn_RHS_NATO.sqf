@@ -223,24 +223,30 @@ switch (_rewardId) do {
     case 603: {
         _vehicle = CV("rhs_t90sm_tv");
 
-        for "_i" from 1 to 10 do {
-            _vehicle removeMagazineGlobal "200Rnd_762x51_Belt_Green";
+        for "_i" from 1 to 8 do {
+            _vehicle removeMagazineGlobal "rhs_mag_762x54mm_250";
         };
 
-        _vehicle removeWeapon "LMG_coax";
+        _vehicle removeWeaponTurret ["rhs_weap_pkt", [0]];
 
-        _vehicle addWeaponTurret ["HMG_127_MBT", [0]];
+        _vehicle addWeaponTurret ["RHS_M2_Abrams_Gunner", [0]];
+
+        for "_i" from 1 to 6 do {
+            _vehicle addMagazineTurret ["rhs_mag_200rnd_127x99_SLAP_mag_Tracer_Red", [0]];
+        };
+
+        _vehicle removeMagazineTurret ["rhs_mag_3bm46_8", [0]];
+        _vehicle removeMagazineTurret ["rhs_mag_3bk31_3", [0]];
+        _vehicle removeMagazineTurret ["rhs_mag_3of26_7", [0]];
+        _vehicle removeMagazineTurret ["rhs_mag_9m119_4", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_3bm46", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_3bk31", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_3of26", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_9m119m_6", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_9m119f_6", [0]];
 
         for "_i" from 1 to 4 do {
-            _vehicle addMagazineTurret ["500Rnd_127x99_mag_Tracer_Red", [0]];
-        };
-
-        _vehicle addMagazineTurret ["16Rnd_125mm_APFSDS_T_Green", [0]];
-        _vehicle addMagazineTurret ["12Rnd_125mm_HEAT_T_Green", [0]];
-        _vehicle addMagazineTurret ["12Rnd_125mm_HE_T_Green", [0]];
-
-        for "_i" from 1 to 2 do {
-            _vehicle addMagazineTurret ["150Rnd_127x108_Ball", [0,0]];
+            _vehicle addMagazineTurret ["rhs_mag_127x108mm_150", [0,0]];
         };
 
         [_vehicle] call AW_fnc_vehicleCustomization;
@@ -251,24 +257,25 @@ switch (_rewardId) do {
     case 602: {
         _vehicle = CV("rhsusf_m1a2sep2d_usarmy");
 
-        for "_i" from 1 to 20 do {
-            _vehicle removeMagazineGlobal "200Rnd_762x51_Belt_Red";
+        for "_i" from 1 to 8 do {
+            _vehicle removeMagazineGlobal "rhs_mag_762x51_M240_1200";
         };
 
-        _vehicle removeWeapon ("LMG_coax");
+        _vehicle removeWeaponTurret ["rhs_weap_m240_abrams_coax", [0]];
+        _vehicle addWeaponTurret ["RHS_M2_Abrams_Gunner", [0]];
 
-        _vehicle addWeaponTurret ["HMG_127_MBT", [0]];
-
-        for "_i" from 1 to 4 do {
-            _vehicle addMagazineTurret ["500Rnd_127x99_mag_Tracer_Red", [0]];
+        for "_i" from 1 to 6 do {
+            _vehicle addMagazineTurret ["rhs_mag_200rnd_127x99_SLAP_mag_Tracer_Red", [0]];
         };
 
-        _vehicle addMagazineTurret ["24Rnd_120mm_APFSDS_shells_Tracer_Red", [0]];
-        _vehicle addMagazineTurret ["12Rnd_120mm_HE_shells_Tracer_Red", [0]];
-        _vehicle addMagazineTurret ["12Rnd_120mm_HEAT_MP_T_Red", [0]];
+        _vehicle removeMagazineTurret ["rhs_mag_M829A3", [0]];
+        _vehicle removeMagazineTurret ["rhs_mag_M830A1", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_M829A4_max", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_M1147_max", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_M416", [0]];
 
         for "_i" from 1 to 4 do {
-            _vehicle addMagazineTurret ["200Rnd_127x99_mag_Tracer_Red", [0,0]];
+            _vehicle addMagazineTurret ["rhs_mag_400rnd_127x99_SLAP_mag_Tracer_Red", [0,0]];
         };
 
         [_vehicle] call AW_fnc_vehicleCustomization;
@@ -318,51 +325,59 @@ switch (_rewardId) do {
     case 707: {
         _vehicle = CV("RHS_M2A3_BUSKIII");
 
-        for "_i" from 1 to 8 do {
-            _vehicle removeMagazineGlobal "200Rnd_762x51_Belt_Yellow";
+        for "_i" from 1 to 2 do {
+            _vehicle removeMagazineGlobal "rhs_mag_1100Rnd_762x51_M240";
         };
 
-        _vehicle removeWeapon "LMG_coax";
+        _vehicle removeWeaponTurret ["rhs_weap_m240_bradley_coax", [0]];
 
-        _vehicle addWeaponTurret ["HMG_127_MBT", [0]];
+        _vehicle addWeaponTurret ["RHS_M2_Abrams_Gunner", [0]];
 
-        for "_i" from 1 to 4 do {
-            _vehicle addMagazineTurret ["500Rnd_127x99_mag_Tracer_Red", [0]];
+        for "_i" from 1 to 6 do {
+            _vehicle addMagazineTurret ["rhs_mag_200rnd_127x99_SLAP_mag_Tracer_Red", [0]];
         };
 
-        _vehicle addMagazineTurret ["60Rnd_30mm_APFSDS_shells_Tracer_Yellow", [0]];
-        _vehicle addMagazineTurret ["60Rnd_30mm_APFSDS_shells_Tracer_Yellow", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_70Rnd_25mm_M242_APFSDS", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_70Rnd_25mm_M242_APFSDS", [0]];
 
-        _vehicle addMagazineTurret ["140Rnd_30mm_MP_shells_Tracer_Yellow", [0]];
-        _vehicle addMagazineTurret ["140Rnd_30mm_MP_shells_Tracer_Yellow", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_230Rnd_25mm_M242_HEI", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_230Rnd_25mm_M242_HEI", [0]];
+
+        _vehicle addMagazineTurret ["rhs_mag_2Rnd_TOW2A", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_2Rnd_TOW2A", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_2Rnd_TOW2B_AERO", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_2Rnd_TOW2BB", [0]];
 
         [_vehicle] call AW_fnc_vehicleCustomization;
     };
 
-    // Enhanced ASCOD Pizarro SLE
+    // Enhanced BMD-2M
     case 711: {
-        _vehicle = CV("PRACS_Pizarro_SLE");
+        _vehicle = CV("rhs_bmd2m");
 
         for "_i" from 1 to 8 do {
-            _vehicle removeMagazineGlobal "200Rnd_762x51_Belt_Yellow";
+            _vehicle removeMagazineGlobal "rhs_mag_762x54mm_250";
         };
 
-        _vehicle removeWeapon "LMG_coax_ext";
+        _vehicle removeWeaponTurret ["rhs_weap_pkt", [0]];
 
-        _vehicle addWeaponTurret ["HMG_127_MBT", [0]];
+        _vehicle addWeaponTurret ["RHS_M2_Abrams_Gunner", [0]];
 
-        for "_i" from 1 to 4 do {
-            _vehicle addMagazineTurret ["500Rnd_127x99_mag_Tracer_Red", [0]];
+        for "_i" from 1 to 6 do {
+            _vehicle addMagazineTurret ["rhs_mag_200rnd_127x99_SLAP_mag_Tracer_Red", [0]];
         };
 
-        _vehicle addMagazineTurret ["60Rnd_30mm_APFSDS_shells_Tracer_Yellow", [0]];
-        _vehicle addMagazineTurret ["60Rnd_30mm_APFSDS_shells_Tracer_Yellow", [0]];
+        _vehicle removeMagazineTurret ["rhs_mag_3uof8_180", [0]];
+        _vehicle removeMagazineTurret ["rhs_mag_3ubr8_120", [0]];
 
-        _vehicle addMagazineTurret ["140Rnd_30mm_MP_shells_Tracer_Yellow", [0]];
-        _vehicle addMagazineTurret ["140Rnd_30mm_MP_shells_Tracer_Yellow", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_3ubr11_250", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_3ubr11_250", [0]];
 
-        _vehicle addMagazineTurret ["2Rnd_GAT_missiles", [0]];
-        _vehicle addMagazineTurret ["2Rnd_GAT_missiles", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_3uof8_305", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_3uof8_305", [0]];
+
+        _vehicle addMagazineTurret ["rhs_mag_9m133_2", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_9m133_2", [0]];
 
         [_vehicle] call AW_fnc_vehicleCustomization;
     };
@@ -371,26 +386,35 @@ switch (_rewardId) do {
     case 709: {
         _vehicle = CV("rhs_bmd4ma_vdv");
 
-        for "_i" from 1 to 8 do {
-            _vehicle removeMagazineGlobal "200Rnd_762x51_Belt_Green";
+        for "_i" from 1 to 16 do {
+            _vehicle removeMagazineGlobal "rhs_mag_762x54mm_250";
         };
 
-        _vehicle removeWeapon "LMG_coax_ext";
+        _vehicle removeWeaponTurret ["rhs_weap_pkt_bmd_coax", [0]];
 
-        _vehicle addWeaponTurret ["HMG_127_MBT", [0]];
+        _vehicle addWeaponTurret ["RHS_M2_Abrams_Gunner", [0]];
 
-        for "_i" from 1 to 4 do {
-            _vehicle addMagazineTurret ["500Rnd_127x99_mag_Tracer_Red", [0]];
+        for "_i" from 1 to 6 do {
+            _vehicle addMagazineTurret ["rhs_mag_200rnd_127x99_SLAP_mag_Tracer_Red", [0]];
         };
 
-        _vehicle addMagazineTurret ["60Rnd_30mm_APFSDS_shells_Tracer_Green", [0]];
-        _vehicle addMagazineTurret ["60Rnd_30mm_APFSDS_shells_Tracer_Green", [0]];
+        _vehicle removeMagazineTurret ["rhs_mag_3uof8_180", [0]];
+        _vehicle removeMagazineTurret ["rhs_mag_3ubr8_120", [0]];
 
-        _vehicle addMagazineTurret ["140Rnd_30mm_MP_shells_Tracer_Green", [0]];
-        _vehicle addMagazineTurret ["140Rnd_30mm_MP_shells_Tracer_Green", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_3ubr11_250", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_3ubr11_250", [0]];
 
-        _vehicle addMagazineTurret ["2Rnd_GAT_missiles_O", [0]];
-        _vehicle addMagazineTurret ["2Rnd_GAT_missiles_O", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_3uof8_305", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_3uof8_305", [0]];
+
+        _vehicle addMagazineTurret ["rhs_mag_9m117m1_8", [0]];
+        _vehicle addMagazineTurret ["rhs_mag_9m117m1_8", [0]];
+
+        _vehicle addMagazineTurret ["rhs_mag_762x54mm_2000", [1]];
+        _vehicle addMagazineTurret ["rhs_mag_762x54mm_2000", [1]];
+
+        _vehicle addMagazineTurret ["rhs_mag_762x54mm_2000", [2]];
+        _vehicle addMagazineTurret ["rhs_mag_762x54mm_2000", [2]];
 
         [_vehicle] call AW_fnc_vehicleCustomization;
     };

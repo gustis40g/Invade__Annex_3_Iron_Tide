@@ -44,15 +44,15 @@ InA_Rewards_RewardList = [
 
     // IFVs
     [700, 703, "FV-107 Scimitar", 3],
-    [700, 714, "FV-101 Scorpion", 3],
-    [700, 701, "BMD-2M", 2],
+    [700, 701, "FV-101 Scorpion", 2],
     [700, 704, "M2A3", 3],
     [700, 706, "M2A3 (BUSK III)", 3],
     [700, 707, "Enhanced M2A3 (BUSK III)", 3],
     [700, 708, "BMD-4M(A)", 3],
     [700, 709, "Enhanced BMD-4M(A)", 3],
     [700, 710, "ASCOD Pizarro SLE", 3],
-    [700, 711, "Enhanced ASCOD Pizarro SLE", 3],
+    [700, 714, "BMD-2M", 3],
+    [700, 711, "Enhanced BMD-2M", 3],
     [700, 712, "FV-510 Warrior", 3],
 
     // SPAAGs
