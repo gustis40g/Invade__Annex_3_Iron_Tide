@@ -189,7 +189,7 @@ class Altis {
 
                 vehicles[] = {
                     {"JET_CAP", "term_jet1", 1800},
-                    {"RHS_C130J", "term_jet2", 60},
+                    {"RHS_C130J_Cargo", "term_jet2", 60},
                     {"HELI_LCAS", "term_heli1", 900},
                     {"HELI_MED", "term_heli2", 300},
                     {"UK3CB_BAF_Merlin_HC4_18_GPMG_DDPM", "term_heli3", 300},
