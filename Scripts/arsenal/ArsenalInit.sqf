@@ -38,26 +38,3 @@ player addEventHandler ["Take", {
     0 = [] spawn AW_fnc_inventoryInformation;
 }];
 
-// Arsenal eventhandlers
-[missionNamespace, "arsenalClosed", {
-    [player] call AW_fnc_persistentLoadoutSet;
-
-    missionNamespace setVariable ["InA_PlayerLoadout", (getUnitLoadout player)];
-
-    [true] call AW_fnc_cleanInventory;
-    0 = [] spawn AW_fnc_inventoryInformation;
-
-    if (!isNil "TFAR_core") then {
-        if (call TFAR_fnc_haveSWRadio) then {
-            call RYK_fnc_TFAR_SR;
-        };
-
-        if (call TFAR_fnc_haveLRRadio) then {
-            call RYK_fnc_TFAR_LR;
-        };
-    };
-}] call BIS_fnc_addScriptedEventHandler;
-
-[missionNamespace, "arsenalPreOpen", {
-    [true] call AW_fnc_cleanInventory;
-}] call BIS_fnc_addScriptedEventHandler;

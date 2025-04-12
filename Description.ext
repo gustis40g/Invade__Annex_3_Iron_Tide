@@ -1,7 +1,7 @@
 //------------------------- On Load
 
 author = "AhoyWorld and Community + Baconmop";					// Visible when loading mission
-onLoadName = "Invade & Annex 3.4.22";						// Visible when loading mission
+onLoadName = "Invade & Annex: Iron Tide 3.4.22";						// Visible when loading mission
 OnLoadMission = "<t font='PuristaMedium' size='0.8'><t font='PuristaBold'><t color='#d91010'>//</t>Ahoy</t>World</t>: <t font='PuristaMedium' size='0.8' color='#f8c471'>Invade &amp; Annex</t> - To get involved, go to <t font='PuristaMedium' size='0.8'><t font='PuristaBold'>Ahoy</t>World</t>.net or join ts.<t font='PuristaMedium' size='0.8'><t font='PuristaBold'>Ahoy</t>World</t>.net";
 loadScreen = __EVAL(format ["Media\splash_%1.jpg", worldName]);				// Visible when loading mission
 overviewPicture = __EVAL(format ["Media\splash_%1.jpg", worldName]);			// Visible when selecting mission
