@@ -43,7 +43,7 @@ switch (_unitType) do {
             ]],
             [],
             "rhsusf_ach_helmet_headset_ocp","G_Aviator",
-            ["UK3CB_BAF_Soflam_Laserdesignator","","","",[],[],""],
+            ["UK3CB_BAF_Soflam_Laserdesignator","","","",["Laserbatteries",1],[],""],
             ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
@@ -194,7 +194,7 @@ switch (_unitType) do {
                 ]],
             [],
             "rhsusf_ach_helmet_headset_ocp","G_Bandanna_aviator",
-            ["UK3CB_BAF_Soflam_Laserdesignator","","","",[],[],""],
+            ["UK3CB_BAF_Soflam_Laserdesignator","","","",["Laserbatteries",1],[],""],
             ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
@@ -272,7 +272,8 @@ switch (_unitType) do {
                 ["rhsusf_ANPVS_14",1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",6,30],["rhs_mag_M433_HEDP",3,1],["rhs_mag_M397_HET",4,1],["rhs_mag_m576",2,1],["rhs_mag_m713_Red",1,1],["rhs_mag_m714_White",1,1]
                 ]],
             [],
-            "rhsusf_ach_helmet_headset_ocp","G_Bandanna_tan",["UK3CB_BAF_Soflam_Laserdesignator","","","",[],[],""],
+            "rhsusf_ach_helmet_headset_ocp","G_Bandanna_tan",
+            ["UK3CB_BAF_Soflam_Laserdesignator","","","",["Laserbatteries",1],[],""],
             ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
@@ -305,7 +306,7 @@ switch (_unitType) do {
                 ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
                 ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]]],["rhsusf_iotv_ocp_Rifleman",[["rhsusf_ANPVS_14",1],["rhs_mag_30Rnd_556x45_M855_Stanag",3,30]
                 ]],
-            ["rhs_M252_Gun_Bag",[]],
+            [],
             "rhsusf_patrolcap_ocp","rhs_googles_black",
             ["ACE_VectorDay","","","",[],[],""],
             ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
@@ -339,7 +340,7 @@ switch (_unitType) do {
                 ]],
             [],
             "rhsusf_mich_helmet_marpatwd_alt_headset","rhsusf_shemagh_tan",
-            ["UK3CB_BAF_Soflam_Laserdesignator","","","",[],[],""],
+            ["UK3CB_BAF_Soflam_Laserdesignator","","","",["Laserbatteries",1],[],""],
             ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
@@ -374,7 +375,8 @@ switch (_unitType) do {
                 ["rhsusf_ANPVS_15",1],["rhsusf_mag_17Rnd_9x19_JHP",1,17],["UK3CB_BAF_762_L42A1_20Rnd",6,20]
                 ]],
             [],
-            "rhsusf_mich_helmet_marpatwd_alt_headset","rhsusf_shemagh_tan",["UK3CB_BAF_Soflam_Laserdesignator","","","",[],[],""],
+            "rhsusf_mich_helmet_marpatwd_alt_headset","rhsusf_shemagh_tan",
+            ["UK3CB_BAF_Soflam_Laserdesignator","","","",["Laserbatteries",1],[],""],
             ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
@@ -395,7 +397,8 @@ switch (_unitType) do {
                 ["ACE_elasticBandage",20],["ACE_quikclot",20],["ACE_bloodIV",2],["ACE_bloodIV_250",4],["ACE_bloodIV_500",3],["ACE_epinephrine",10],["ACE_morphine",10],["ACE_packingBandage",20],["ACE_personalAidKit",1],
                 ["ACE_plasmaIV",2],["ACE_plasmaIV_250",4],["ACE_plasmaIV_500",3],["ACE_salineIV",2],["ACE_salineIV_250",4],["ACE_salineIV_500",3],["ACE_splint",10],["ACE_surgicalKit",1],["ACE_tourniquet",4]
                 ]],
-            "rhsusf_mich_helmet_marpatwd_alt_headset","rhsusf_shemagh2_tan",["UK3CB_BAF_Soflam_Laserdesignator","","","",[],[],""],
+            "rhsusf_mich_helmet_marpatwd_alt_headset","rhsusf_shemagh2_tan",
+            ["UK3CB_BAF_Soflam_Laserdesignator","","","",["Laserbatteries",1],[],""],
             ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
@@ -416,7 +419,7 @@ switch (_unitType) do {
                 ["rhsusf_m112x4_mag",2,1],["rhsusf_m112_mag",4,1]
                 ]],
             "rhsusf_mich_helmet_marpatwd_alt_headset","rhsusf_shemagh_tan",
-            ["UK3CB_BAF_Soflam_Laserdesignator","","","",[],[],""],
+            ["UK3CB_BAF_Soflam_Laserdesignator","","","",["Laserbatteries",1],[],""],
             ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
          ];
     };
@@ -432,7 +435,7 @@ switch (_unitType) do {
                 ]],
             ["B_RadioBag_01_black_F",[]],
             "rhsusf_mich_helmet_marpatwd_alt_headset","rhsusf_shemagh_tan",
-            ["UK3CB_BAF_Soflam_Laserdesignator","","","",[],[],""],
+            ["UK3CB_BAF_Soflam_Laserdesignator","","","",["Laserbatteries",1],[],""],
             ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
          ];
     };

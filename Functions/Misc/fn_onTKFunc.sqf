@@ -1,7 +1,7 @@
 
 if (!hasInterface) exitWith {};
 if (player getVariable ["InA_isZeus", false]) exitWith {};
-if ((player getVariable 'timeTKd' == round(time)) || (roleDescription player find "Pilot" > -1)) exitWith {};
+if ((player getVariable 'timeTKd' == round(time)) || ((player getVariable ['AW_role', '']) == 'pilot')) exitWith {};
 
 amountOfTKs = amountOfTKs + 1;
 player setVariable ['timeTKd', round (time), false];

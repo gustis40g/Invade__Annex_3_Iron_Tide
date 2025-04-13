@@ -108,7 +108,6 @@ class CfgRemoteExec {
 
 
         // I&A functions
-        class AW_fnc_initunittraits {};
 
         class AW_fnc_globalHint {
             allowedTargets = 0;
@@ -397,6 +396,17 @@ class CfgRemoteExec {
         class vn_fnc_switchableturrets_lock {
             allowedTargets = 0;
         };
+
+        //Dynamic grouos
+        class AW_fnc_assignPlayer {
+            allowedTargets = 2;         
+        };
+        class AW_fnc_setupPlayer {
+            allowedTargets = 1; 
+        }
+        class AW_fnc_updateGroups {
+            allowedTargets = 1;         
+        }; 
     };
 
     class Commands {
@@ -405,6 +415,10 @@ class CfgRemoteExec {
 
         class spawn {
             allowedTargets = 0;
+        };
+
+        class selectLeader {
+            allowedTargets = 1;
         };
 
         class setShotParents {

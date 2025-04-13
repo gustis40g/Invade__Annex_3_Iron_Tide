@@ -4,6 +4,19 @@ class AW {
         file = "functions";
     };
 
+    class Groups {
+		file = "functions\Groups";
+		class assignPlayer {};
+		class handleDisconnect {};
+		class initGroupMenu {};
+		class onGroupMenuTvSelectChange {};
+		class onRespawn {};
+		class removeFromGroup {};
+		class selectPosition {};
+		class setupPlayer {};
+		class updateGroups {};
+	};
+
     class AI {
         file = "functions\AI";
         class main_ao_calculate_enemy_numbers {};

@@ -93,10 +93,6 @@ player addAction [
     };
 };
 
-// Make sure player isn't carrying any unlawful stuff
-[true] call AW_fnc_cleanInventory;
-call AW_fnc_inventoryInformation;
-
 // Add player to Zeus:
 [[player]] remoteExec ["AW_fnc_addToAllCurators", 2];
 

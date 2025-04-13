@@ -2,35 +2,36 @@ params [
     ["_inArsenal", false]
 ];
 
-private _removedString = "The following equipment has been removed from your inventory:<br/><br/>";
-private _removedItems = [];
-
 if ((!alive player) || ("GearRestriction" call BIS_fnc_getParamValue == 0)) exitWith {};
 if (player getVariable ["InA_isCoreStaff", false]) exitWith {};
 
-if (isNil "InA_ArsenalWhitelistArray") exitWith {};
+// Get current role or default to rifleman
+private _role = player getVariable ["AW_role", "rifleman"];
+private _whitelist = InA_PrecompiledArsenalWhitelists getOrDefault [_role, InA_DefaultArsenalWhitelist];
 
-private _allowedItemsArray = (InA_ArsenalWhitelistArray # 0);
-private _allowedWeaponsArray = (InA_ArsenalWhitelistArray # 1);
-private _allowedBackpacksArray = (InA_ArsenalWhitelistArray # 2);
-private _allowedWeaponPickupArray = (InA_ArsenalWhitelistArray # 4);
+private _allowedItemsArray = (_whitelist # 0);
+private _allowedWeaponsArray = (_whitelist # 1);
+private _allowedBackpacksArray = (_whitelist # 2);
+private _allowedWeaponPickupArray = (_whitelist # 4);
 private _weaponList = (_allowedWeaponsArray + _allowedItemsArray);
 
+private _removedString = "The following equipment has been removed from your inventory:<br/><br/>";
+private _removedItems = [];
+
+// Reusable function to check class inheritance
 private _fnc_checkClass = {
     params ["_class", "_baseClasses"];
 
     private _derivedFromBase = false;
 
     {
-        private _derived = false;
-
-        if (isClass (configFile >> "CfgVehicles" >> _class)) then {
-            _derived = (_class isKindOf _x);
+        private _configPath = if (isClass (configFile >> "CfgVehicles" >> _class)) then {
+            configFile >> "CfgVehicles"
         } else {
-            _derived = (_class isKindOf [_x, configFile >> "CfgWeapons"]);
+            configFile >> "CfgWeapons"
         };
 
-        if (_derived) then {
+        if (isClass (_configPath >> _class) && {_class isKindOf [_x, _configPath]}) then {
             _derivedFromBase = true;
             break;
         };
@@ -39,126 +40,83 @@ private _fnc_checkClass = {
     _derivedFromBase
 };
 
-
-// Weapons:
+// Weapons check
 {
-
-    if ((_x != "") && (!(_x in _weaponList))) then {
-        private _weap = _x;
+    if ((_x != "") && {!(_x in _weaponList)}) then {
         private _remove = true;
-
-        if (!_inArsenal && {[_weap, _allowedWeaponPickupArray] call _fnc_checkClass}) then {
-            continue;
+        
+        // Allow pickup of whitelisted weapon classes
+        if (!_inArsenal && {[_x, _allowedWeaponPickupArray] call _fnc_checkClass}) then {
+            _remove = false;
         };
 
         if (_remove) then {
-            _removedString = _removedString + (getText (configFile >> "CfgWeapons" >> _x >> "displayName")) + "<br/>";
+            private _displayName = getText (configFile >> "CfgWeapons" >> _x >> "displayName");
+            _removedString = _removedString + _displayName + "<br/>";
             _removedItems pushBack _x;
             player removeWeapon _x;
         };
     };
 } forEach (weapons player);
 
-
-// Primary weapon attachments:
-{
-    if ((_x != "") && (!(_x in _allowedItemsArray))) then {
-        _removedString = _removedString + (getText (configFile >> "CfgWeapons" >> _x >> "displayName")) + "<br/>";
-        _removedItems pushBack _x;
-        player removePrimaryWeaponItem _x;
+// Weapon attachments (primary/secondary/handgun)
+private _attachmentCheck = {
+    params ["_item"];
+    
+    if ((_item != "") && {!(_item in _allowedItemsArray)}) then {
+        private _displayName = getText (configFile >> "CfgWeapons" >> _item >> "displayName");
+        _removedString = _removedString + _displayName + "<br/>";
+        _removedItems pushBack _item;
+        true
+    } else {
+        false
     };
-} forEach (primaryWeaponItems player);
-
-
-// Secondary weapon attachments:
-{
-    if ((_x != "") && (!(_x in _allowedItemsArray))) then {
-        _removedString = _removedString + (getText (configFile >> "CfgWeapons" >> _x >> "displayName")) + "<br/>";
-        _removedItems pushBack _x;
-        player removeSecondaryWeaponItem _x;
-    };
-} forEach (secondaryWeaponItems player);
-
-
-// Handgun weapon attachments:
-{
-    if ((_x != "") && (!(_x in _allowedItemsArray))) then {
-        _removedString = _removedString + (getText (configFile >> "CfgWeapons" >> _x >> "displayName")) + "<br/>";
-        _removedItems pushBack _x;
-        player removeHandgunItem _x;
-    };
-} forEach (handgunItems player);
-
-
-// Headgear:
-private _headgear = (headgear player);
-
-if ((_headgear != "") && (!(_headgear in _allowedItemsArray))) then {
-    _removedString = _removedString + (getText (configFile >> "CfgWeapons" >> _headgear >> "displayName")) + "<br/>";
-    _removedItems pushBack _headgear;
-    removeHeadgear player;
 };
 
+{ if (_x call _attachmentCheck) then { player removePrimaryWeaponItem _x; } } forEach (primaryWeaponItems player);
+{ if (_x call _attachmentCheck) then { player removeSecondaryWeaponItem _x; } } forEach (secondaryWeaponItems player);
+{ if (_x call _attachmentCheck) then { player removeHandgunItem _x; } } forEach (handgunItems player);
 
-// Uniform:
-private _uniform = (uniform player);
-
-if ((_uniform != "") && (!(_uniform in _allowedItemsArray))) then {
-    _removedString = _removedString + (getText (configFile >> "CfgWeapons" >> _uniform >> "displayName")) + "<br/>";
-    _removedItems pushBack _uniform;
-    removeUniform player;
+// Gear check
+private _gearCheck = {
+    params ["_item", "_configPath", "_removeFunc"];
+    
+    if ((_item != "") && {!(_item in _allowedItemsArray)}) then {
+        private _displayName = getText (_configPath >> _item >> "displayName");
+        _removedString = _removedString + _displayName + "<br/>";
+        _removedItems pushBack _item;
+        call _removeFunc;
+    };
 };
 
+[headgear player, configFile >> "CfgWeapons", { removeHeadgear player }] call _gearCheck;
+[uniform player, configFile >> "CfgWeapons", { removeUniform player }] call _gearCheck;
+[vest player, configFile >> "CfgWeapons", { removeVest player }] call _gearCheck;
 
-// Vest:
-private _vest = (vest player);
-
-if ((_vest != "") && (!(_vest in _allowedItemsArray))) then {
-    _removedString = _removedString + (getText (configFile >> "CfgWeapons" >> _vest >> "displayName")) + "<br/>";
-    _removedItems pushBack _vest;
-    removeVest player;
-};
-
-
-// Backpack:
-private _backpack = (backpack player);
-private _backpackList = _allowedBackpacksArray;
-
-if ((_backpack != "") && {(!(_backpack in _backpackList))}) then {
-    if ((_backpack find "TFAR" == -1) || !([_backpack, InA_AllowedPickup_Backpacks] call _fnc_checkClass)) then {
-        _removedString = _removedString + (getText (configFile >> "CfgVehicles" >> _backpack >> "displayName")) + "<br/>";
+// Backpack check
+private _backpack = backpack player;
+if ((_backpack != "") && {!(_backpack in _allowedBackpacksArray)}) then {
+    // Special handling for TFAR radios and allowed pickup backpacks
+    if ((_backpack find "TFAR" == -1) && {!([_backpack, InA_AllowedPickup_Backpacks] call _fnc_checkClass)}) then {
+        private _displayName = getText (configFile >> "CfgVehicles" >> _backpack >> "displayName");
+        _removedString = _removedString + _displayName + "<br/>";
         _removedItems pushBack _backpack;
         removeBackpack player;
     };
 };
 
-
-// Assigned items:
+// Assigned items and inventory
 {
-    if ((_x != "") && (!(_x in _allowedItemsArray))) then {
-        if (_x find "TFAR" == -1) then {
-            _removedString = _removedString + (getText (configFile >> "CfgWeapons" >> _x >> "displayName")) + "<br/>";
-            _removedItems pushBack _x;
-            player unassignItem _x;
-            player removeItem _x;
-        };
+    if ((_x != "") && {!(_x in _weaponList) && {_x find "TFAR" == -1}}) then {
+        private _displayName = getText (configFile >> "CfgWeapons" >> _x >> "displayName");
+        _removedString = _removedString + _displayName + "<br/>";
+        _removedItems pushBack _x;
+        player unassignItem _x;
+        player removeItem _x;
     };
-} forEach (assignedItems player);
+} forEach (assignedItems player + items player);
 
-
-// Items in inventory:
-{
-    if ((_x != "") && (!(_x in _weaponList))) then {
-        if (_x find "TFAR" == -1) then {
-            _removedString = _removedString + (getText (configFile >> "CfgWeapons" >> _x >> "displayName")) + "<br/>";
-            _removedItems pushBack _x;
-            player removeItem _x;
-        };
-    };
-} forEach (items player);
-
-
-// Tell the player what happened:
+// Display removal message if needed
 if (count _removedItems > 0) then {
     _removedString = _removedString + "<br/>Play a different role if you want to use it.";
     hint parseText format ['%1', _removedString];

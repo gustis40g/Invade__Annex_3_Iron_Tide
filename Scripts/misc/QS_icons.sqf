@@ -108,10 +108,10 @@ _QS_ST_iconColor_UNKNOWN = [0.7,0.6,0,0.5];						// ARRAY (NUMBER). RGBA color c
 
 _QS_ST_showMedicalWounded = TRUE;								// BOOL. TRUE to show wounded on the map and GPS. FALSE to not show wounded on the map with this script. Default TRUE.
 _QS_ST_MedicalSystem = [										// ARRAY(STRING). The Active Medical System. Uncomment ONLY ONE. FIRST UNCOMMENTED ONE WILL BE USED. Comment the rest out as shown. Do not add commas and only allow 1 to be uncommented.
-	'BIS'														// BIS Revive.
+	//'BIS'														// BIS Revive.
 	//'BTC'														// BTC Revive.
 	//'AIS'														// AIS Revive.
-	//'ACE'														// ACE 3 Revive.
+	'ACE'														// ACE 3 Revive.
 	//'FAR'														// Farooq's Revive.
 	//'AWS'    													// A3 Wounding System by Psycho.
 ];

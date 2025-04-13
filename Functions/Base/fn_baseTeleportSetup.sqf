@@ -43,7 +43,7 @@ if (_currLoc != "BASE") then {
 };
 
 if (_currLoc != "Pilot") then {
-    private _cond = "(roleDescription player find 'Pilot' > -1)";
+    private _cond = "(player getVariable ['AW_role',''] == 'pilot')";
     
     [
         _obj,
@@ -54,7 +54,7 @@ if (_currLoc != "Pilot") then {
 };
 
 if (_currLoc != "Carrier") then {
-    private _cond = "(((roleDescription player) find 'Pilot') > -1) || ((typeOf player) == 'B_soldier_UAV_F') || (_this getVariable ['InA_isZeus', false])";
+     private _cond = "(player getVariable ['AW_role',''] in ['pilot','uav']) || (_this getVariable ['InA_isZeus', false])";
     
     [
         _obj,

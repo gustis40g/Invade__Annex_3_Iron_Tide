@@ -1,10 +1,9 @@
 /*
  * Author: Whigital, reworked by Gustis40g to work with ACE arsenal.
  * Description:
- * Adds arsenal with restrictions and add scroll wheel actions on the arsenals.
+ * Adds arsenal and adds scroll wheel actions on the arsenals.
  *
  */
-
 params [
     ["_arsenal", objNull],
     ["_full", false],
@@ -15,51 +14,41 @@ params [
 if (!hasInterface) exitWith {};
 if (isNull _arsenal) exitWith {};
 
-waitUntil {sleep 0.1; !isNil "InA_ArsenalRestrictionsInitialized" && {InA_ArsenalRestrictionsInitialized}};
-
-_arsenal lockInventory true;
-
-// ACE Arsenal setup
-private _condition = {true}; // Default condition - can be modified if needed
-private _onOpen = {
-    params ["_container"];
-    // Clean inventory BEFORE opening (matches 'arsenalPreOpen')
-    [true] call AW_fnc_cleanInventory;
+// Wait for precompiled lists to be ready (with timeout)
+private _startTime = diag_tickTime;
+private _timeout = 30; // seconds
+waitUntil {
+    sleep 0.1;
+    (!isNil "InA_PrecompiledArsenalWhitelists" && {!isNil "InA_DefaultArsenalWhitelist"}) || 
+    (diag_tickTime - _startTime > _timeout)
 };
 
-private _onClose = {
-    params ["_container"];
-    // Save loadout persistently (matches 'arsenalClosed')
-    [player] call AW_fnc_persistentLoadoutSet;
-    // Update global loadout variable
-    missionNamespace setVariable ["InA_PlayerLoadout", (getUnitLoadout player)];
-    // Clean inventory AFTER closing
-    [true] call AW_fnc_cleanInventory;
-    // Update inventory info
-    [] spawn AW_fnc_inventoryInformation;
-    
-    // Handle TFAR radios (if present)
-    if (!isNil "TFAR_core") then {
-        if (call TFAR_fnc_haveSWRadio) then { call RYK_fnc_TFAR_SR; };
-        if (call TFAR_fnc_haveLRRadio) then { call RYK_fnc_TFAR_LR; };
+if (diag_tickTime - _startTime > _timeout) then {
+    diag_log "[ARSENAL] Error: Failed to load precompiled whitelists within timeout";
+    [_arsenal, true] call ace_arsenal_fnc_initBox; // Fallback to full arsenal
+} else {
+    _arsenal lockInventory true;
+
+    if (!_full) then {
+        // Get current player role or default to rifleman
+        private _role = player getVariable ["AW_role", "rifleman"];
+        private _whitelist = InA_PrecompiledArsenalWhitelists getOrDefault [_role, InA_DefaultArsenalWhitelist];
+        
+        // Combine allowed items from the whitelist
+        private _allowedItems = (_whitelist # 0) +  // Items
+                              (_whitelist # 1) +  // Weapons
+                              (_whitelist # 2) +  // Backpacks
+                              (_whitelist # 3);   // Magazines
+        
+        // Initialize arsenal box with restricted items
+        [_arsenal, _allowedItems, false] call ace_arsenal_fnc_initBox;
+    } else {
+        // Full arsenal (for admins/zeus)
+        [_arsenal, true, false] call ace_arsenal_fnc_initBox;
     };
 };
 
-// Initialize ACE Arsenal box (for ACE interact)
-if (!_full) then {
-    private _allowedItemsArray = (InA_ArsenalWhitelistArray # 0);
-    private _allowedWeaponsArray = (InA_ArsenalWhitelistArray # 1);
-    private _allowedBackpacksArray = (InA_ArsenalWhitelistArray # 2);
-    private _allowedMagazinesArray = (InA_ArsenalWhitelistArray # 3);
-    
-    // Create ACE Arsenal with restricted items
-    [_arsenal, _allowedWeaponsArray + _allowedItemsArray + _allowedBackpacksArray + _allowedMagazinesArray, _condition, _onOpen, _onClose] call ace_arsenal_fnc_initBox;
-} else {
-    // Full arsenal
-    [_arsenal, true, _condition, _onOpen, _onClose] call ace_arsenal_fnc_initBox;
-};
-
-// Add scroll wheel action to open ACE arsenal
+// Add action with dynamic whitelist
 _arsenal addAction [
     format ["<t color='#00dd00' size='1.1' font='PuristaBold'><img size='1.1' image='\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\rearm_ca.paa' /> %1</t>", (localize "STR_A3_Arsenal")], 
     {
@@ -67,14 +56,26 @@ _arsenal addAction [
         _arguments params [["_fullArsenal", false]];
         
         if (!_fullArsenal) then {
-            private _allowedItemsArray = (InA_ArsenalWhitelistArray # 0);
-            private _allowedWeaponsArray = (InA_ArsenalWhitelistArray # 1);
-            private _allowedBackpacksArray = (InA_ArsenalWhitelistArray # 2);
-            private _allowedMagazinesArray = (InA_ArsenalWhitelistArray # 3);
+            // Wait for precompiled lists if somehow not ready yet
+            waitUntil {sleep 0.1; !isNil "InA_PrecompiledArsenalWhitelists" && {!isNil "InA_DefaultArsenalWhitelist"}};
             
-            [_target, _allowedWeaponsArray + _allowedItemsArray + _allowedBackpacksArray + _allowedMagazinesArray] call ace_arsenal_fnc_addVirtualItems;    
-            [_target, _caller] call ace_arsenal_fnc_openBox;
+            private _role = _caller getVariable ["AW_role", "rifleman"];
+            private _whitelist = InA_PrecompiledArsenalWhitelists getOrDefault [_role, InA_DefaultArsenalWhitelist];
+            
+            // Clear existing virtual items
+            [_target, true] call ace_arsenal_fnc_removeVirtualItems;
+            
+            // Combine allowed items
+            private _allowedItems = (_whitelist # 0) +  // Items
+                                  (_whitelist # 1) +  // Weapons
+                                  (_whitelist # 2) +  // Backpacks
+                                  (_whitelist # 3);   // Magazines
+            
+            // Update arsenal contents
+            [_target, _allowedItems] call ace_arsenal_fnc_addVirtualItems;
+            [_target, _caller, false] call ace_arsenal_fnc_openBox;
         } else {
+            // Full arsenal access
             [_target, _caller, true] call ace_arsenal_fnc_openBox;
         };
     },
@@ -86,6 +87,7 @@ _arsenal addAction [
     "true",
     5
 ];
+
 
 _arsenal addAction [
     "<t color='#0044ff' size='1.1' font='PuristaBold'><img size='1.1' image='\a3\ui_f\data\IGUI\Cfg\Actions\bandage_ca.paa' /> Heal</t>", {
