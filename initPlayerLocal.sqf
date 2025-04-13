@@ -44,41 +44,6 @@ amountOfTKs = 0;
 TKLimit = 3;
 player setVariable ["timeTKd", (round time), false];
 
-[player, (roleDescription player)] call AW_fnc_initUnitTraits;
-
-// Setup player attributes
-[player] remoteExec ["AW_fnc_setPlayerAttribs", 2];
-
-waitUntil {sleep 0.1; (player getVariable ["InA_PlayerAttribsSet", false])};
-
-player setVariable ["derp_revive_side", (side player), true];
-player setVariable ["derp_revive_downed", false, true];
-
-// Derp_revive setup
-if ("derp_revive" in (getMissionConfigValue "respawnTemplates")) then {
-    if (getMissionConfigValue "derp_revive_everyoneCanRevive" == 0) then {
-        if (player getUnitTrait "medic") then {
-            call derp_revive_fnc_drawDowned;
-        };
-    } else {
-        call derp_revive_fnc_drawDowned;
-    };
-
-    derp_revive_maxSafeDamage = getMissionConfigValue ["derp_revive_maxSafeDamage", 0.95];
-    derp_revive_downedDamageThreshold = ["derp_revive_downedDamageThreshold", 1.5] call BIS_fnc_getParamValue;
-
-    derp_revive_handleDamageEhIdx = player addEventHandler ["HandleDamage", {_this call derp_revive_fnc_handleDamage}];
-
-    call derp_revive_fnc_diaryEntries;
-
-    derp_revive_hudElements = shownHUD;
-
-    if (getMissionConfigValue "respawnOnStart" == -1) then {
-        [player] call derp_revive_fnc_reviveActions;
-    };
-};
-
-
 // Weapon sway
 InA_Client_AimingCoefSetting = (["PlayerAimingCoefSetting", -1] call BIS_fnc_getParamValue);
 
@@ -111,42 +76,6 @@ saveProfileNamespace;
     }];
 };
 
-// Pilot specifics
-if ([player] call AW_fnc_isPilot) then {
-    // Grounded check
-    [player] remoteExecCall ["AW_fnc_pilot_grounding_Check", 2];
-
-    private _spawnpos = getPosATL PilotSpawnPos;
-    [player, _spawnpos, "Pilot spawn"] call BIS_fnc_addRespawnPosition;
-
-    0 = ["AddAction"] spawn AW_fnc_helicopterDoors;
-
-    // Allow pilots to repair/refuel their own ship ....
-    player setUnitTrait ["fieldMechanic", true, true];
-};
-
-// FSG Gunner Artillery Computer
-if (player getVariable ["InA_isFSGGunner", false]) then {
-    enableEngineArtillery true;
-} else {
-    enableEngineArtillery false;
-};
-
-// UAV Operator
-if (player getUnitTrait "UAVHacker") then {
-    0 = [] spawn {
-        waitUntil {!isNull (findDisplay 160)};
-
-        0 = [player, nil, "UAV"] spawn AW_fnc_assetDisclaimer;
-
-        {
-            if (!isNull _x) then {
-                player disableUAVConnectability [_x, true];
-            };
-        } forEach InA_BaseAAVehicles;
-    };
-};
-
 
 // Extended passenger information hud
 0 = [] spawn {
@@ -155,14 +84,6 @@ if (player getUnitTrait "UAVHacker") then {
     };
 };
 
-// Cut grass action
-player call AW_fnc_cutGrassAction;
-
-// Chemlight attach actions
-// call AW_fnc_chemlightActionsInit;
-
-// Sling weapon action
-// 0 = ["AddAction"] spawn AW_fnc_slingWeapon;
 
 // Action filtering
 inGameUISetEventHandler ["Action", (toString {
@@ -171,16 +92,6 @@ inGameUISetEventHandler ["Action", (toString {
     private _override = false;
 
     switch (true) do {
-        case ((_caller getVariable ["derp_revive_isCarrying", false]) || (_caller getVariable ["derp_revive_isDragging", false])): {
-            if (["Release wounded", "Drop wounded", "Load wounded"] findIf {(_text find _x) != -1} == -1) then {
-                _override = true;
-
-                showCommandingMenu "RscGroupRootMenu";
-                showCommandingMenu "";
-
-                systemChat format ["Action disabled while dragging/carrying ...."];
-            };
-        };
 
         case (_engineName == "UAVTerminalHackConnection"): {
             if !(_target getVariable ["InA_UAV_CanBeHacked", false]) then {
@@ -244,7 +155,33 @@ inGameUISetEventHandler ["Action", (toString {
             "3Rnd_SmokeYellow_Grenade_shell",
             "3Rnd_SmokePurple_Grenade_shell",
             "3Rnd_SmokeBlue_Grenade_shell",
-            "3Rnd_SmokeOrange_Grenade_shell"
+            "3Rnd_SmokeOrange_Grenade_shell",
+            "UK3CB_BAF_1Rnd_SmokeBlue_Grenade_shell",
+            "UK3CB_BAF_1Rnd_SmokeGreen_Grenade_shell",
+            "UK3CB_BAF_1Rnd_SmokeOrange_Grenade_shell",
+            "UK3CB_BAF_1Rnd_SmokePurple_Grenade_shell",
+            "UK3CB_BAF_1Rnd_SmokeRed_Grenade_shell",
+            "UK3CB_BAF_1Rnd_Smoke_Grenade_shell",
+            "UK3CB_BAF_1Rnd_SmokeYellow_Grenade_shell",
+            "rhs_mag_M583A1_white",
+            "rhs_mag_M585_white_cluster",
+            "rhs_mag_m661_green",
+            "rhs_mag_m662_red",
+            "rhs_mag_m713_Red",
+            "rhs_mag_m714_White",
+            "rhs_mag_m715_Green",
+            "rhs_mag_m716_yellow",
+            "rhsusf_mag_6Rnd_M583A1_white",
+            "rhsusf_mag_6Rnd_m661_green",
+            "rhsusf_mag_6Rnd_m662_red",
+            "rhsusf_mag_6Rnd_M713_red",
+            "rhsusf_mag_6Rnd_M714_white",
+            "rhsusf_mag_6Rnd_M715_green",
+            "rhsusf_mag_6Rnd_M716_yellow",
+            "rhs_GDM40",
+            "rhs_GRD40_Green",
+            "rhs_GRD40_Red",
+            "rhs_GRD40_White"
         ];
 
         if (_mag in _GLs) then {
@@ -272,7 +209,7 @@ inGameUISetEventHandler ["Action", (toString {
             [_msg, "STATIC", true] call AW_fnc_log;
         };
 
-        private _isUAV = ((typeOf _staticWeapon) in ["B_UAV_01_F", "B_UGV_02_Demining_F", "B_UGV_02_Science_F", "B_UAV_06_F", "B_UAV_06_medical_F"]);
+        private _isUAV = ((typeOf _staticWeapon) in ["B_UAV_01_F", "B_UGV_02_Demining_F", "B_UGV_02_Science_F", "B_UAV_06_F", "B_UAV_06_medical_F", "B_rhsusf_B_BACKPACK"]); 
 
         // Prohibit deploying drones near base
         if (_isUAV && {[_unit, 50] call AW_fnc_isNearBase}) exitWith {
@@ -509,4 +446,64 @@ player addEventHandler ["GetOutMan", {
     };
 
     cutText ["", "BLACK IN", 2];
+};
+
+player addEventHandler ["Respawn", AW_fnc_onRespawn];
+
+// Add Group Menu to ACE Self-Actions
+if (!isNil "ace_interact_menu_fnc_createAction") then {
+    private _groupAction = [
+        "AW_GroupMenu",
+        "Role Selection", 
+        "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\meet_ca.paa",
+        { [] call AW_fnc_initGroupMenu; },
+        {
+            isNull objectParent player && // Not in vehicle
+            {[player, 150] call AW_fnc_isNearBase} // Base proximity check
+        },
+        {}, // No children
+        [], // No positional offset
+        [0,0,0], // Default position
+        5 // Priority (higher = appears earlier in menu)
+    ] call ace_interact_menu_fnc_createAction;
+
+    [player, 1, ["ACE_SelfActions"], _groupAction] call ace_interact_menu_fnc_addActionToObject;
+};
+waitUntil {sleep 0.1; !isNil "InA_ArsenalRestrictionsInitialized" && {InA_ArsenalRestrictionsInitialized}};
+
+// Add Arsenal to ACE Self-Actions
+if (!isNil "ace_interact_menu_fnc_createAction") then {
+    private _arsenalAction = [
+        "AW_Arsenal",
+        "Arsenal", 
+        "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\armor_ca.paa",
+        {
+            // Get current role or default to rifleman
+            private _role = player getVariable ["AW_role", "rifleman"];
+            private _whitelist = InA_PrecompiledArsenalWhitelists getOrDefault [_role, InA_DefaultArsenalWhitelist];
+            
+            // Combine all allowed items
+            private _allowedItems = (_whitelist # 0) +  // Items
+                                  (_whitelist # 1) +  // Weapons
+                                  (_whitelist # 2) +  // Backpacks
+                                  (_whitelist # 3);   // Magazines
+            
+            // Clear and add virtual items
+            [player, true] call ace_arsenal_fnc_removeVirtualItems;
+            [player, _allowedItems] call ace_arsenal_fnc_addVirtualItems;
+            
+            // Open arsenal
+            [player, player, false] call ace_arsenal_fnc_openBox;
+        },
+        {
+            isNull objectParent player && 
+            {[player, 150] call AW_fnc_isNearBase}
+        },
+        {}, // No children
+        [], // No positional offset
+        [0,0,0], // Default position
+        5 // Priority
+    ] call ace_interact_menu_fnc_createAction;
+
+    [player, 1, ["ACE_SelfActions"], _arsenalAction] call ace_interact_menu_fnc_addActionToObject;
 };

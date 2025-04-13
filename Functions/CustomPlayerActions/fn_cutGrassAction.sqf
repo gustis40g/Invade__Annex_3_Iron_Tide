@@ -7,12 +7,12 @@
 
 params ["_unit"];
 
-private _roleDesc = (roleDescription _unit);
+private _role = player getVariable ["AW_role", ""];
 
-private _isAutorifleman = ((_roleDesc find "Autorifleman") != -1);
-private _isMarksman = ((_roleDesc find "Marksman") != -1);
-private _isSniper = (((_roleDesc find "Sniper") != -1) && ((_roleDesc find "Spotter") == -1));
-private _isSpotter = ((_roleDesc find "Spotter") != -1);
+private _isAutorifleman = (_role == "ar");
+private _isMarksman = (_role in ["marksman", "rmarksman"]); 
+private _isSniper = (_role == "sniper");
+private _isSpotter = (_role == "spotter");
 
 if (!_isAutorifleman && !_isMarksman && !_isSniper && !_isSpotter) exitWith {};
 

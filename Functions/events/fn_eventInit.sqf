@@ -57,6 +57,7 @@ if (hasInterface) then {
         InA_Client_currentAO = _ao;
     }] call AW_fnc_eventRegister;
 
+    diag_log text format ["[EVENT DEBUG] QEVENT(ArsenalAdded) expands to: %1", QEVENT(ArsenalAdded)];
     [QEVENT(ArsenalAdded), {
         params ["_event", "_args"];
 

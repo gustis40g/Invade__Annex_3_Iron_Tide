@@ -1,7 +1,8 @@
-private _isEngineer = ((player getUnitTrait "engineer") || (player getUnitTrait "explosiveSpecialist") || (player getUnitTrait "fieldMechanic"));
-private _isMedic = (player getUnitTrait "medic");
-private _isFSG = ((roleDescription player) find "FSG Gunner" != -1);
-private _isUAV = ((roleDescription player) find "UAV" != -1);
+private _role = player getVariable ["AW_role", ""];
+private _isEngineer = (_role in ["repair", "engineer"]);
+private _isMedic = (_role in ["medic", "rmedic"]); 
+private _isFSG = (_role == "mortar");
+private _isUAV = (_role == "uav");
 
 private _items = (items player);
 

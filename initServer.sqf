@@ -148,6 +148,27 @@ addMissionEventHandler ["HandleDisconnect", {
     false
 }];
 
+// Load group configs from description.ext
+AW_dynamicGroups = getArray(missionConfigFile >> "Dynamic_Groups" >> "group_setup");
+
+// Initialize groups with empty slots
+{
+    _x params ["_name","_roles","_conditions"];
+	_x pushBack grpNull;
+
+	private _roleCount = count _roles;
+	private _playerArray = [];
+	for "_i" from 1 to _roleCount do {
+		_playerArray pushBack objNull;
+	};
+	_x pushBack _playerArray;
+} forEach AW_dynamicGroups;
+
+
+[AW_dynamicGroups] remoteExecCall ["AW_fnc_updateGroups",-2,"AW_DG_JIP"];
+
+addMissionEventHandler ["HandleDisconnect",{_this call AW_fnc_handleDisconnect}];
+
 
 // Let's get started ....
 execVM "Defines\factionDefines.sqf";
