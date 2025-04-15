@@ -82,7 +82,7 @@ InA_AllowedArsenal_generalItems = [
 
     //Misc:
     "ACE_CableTie", "ACE_EarPlugs", "ACE_IR_Strobe_Item", "ACE_rope36", "ACE_rope27", "ACE_rope18", "ACE_rope15", "ACE_rope12", "ACE_rope6", "ACE_rope3", "ACE_Sandbag_empty", "ACE_SpareBarrel", "ace_flags_white", //for French people
-    "ACE_SpraypaintBlack", "ACE_SpraypaintBlue", "ACE_SpraypaintGreen", "ACE_SpraypaintRed", "ACE_SpraypaintWhite", "ACE_SpraypaintYellow", "ACE_UAVBattery"
+    "ACE_SpraypaintBlack", "ACE_SpraypaintBlue", "ACE_SpraypaintGreen", "ACE_SpraypaintRed", "ACE_SpraypaintWhite", "ACE_SpraypaintYellow", "ACE_UAVBattery", "ACE_EHP"
 ];
 // ACE Medical items for Medics: not used for now, waiting to see if players find all medical items confusing or not.
 // InA_AllowedArsenal_medicItems = [
@@ -1166,7 +1166,7 @@ InA_AllowedArsenal_generalVests = [
 
 // Medic Vests
 InA_AllowedArsenal_vestsMedic = [
-    "rhsusf_iotv_ocp_Medic", "rhsusf_iotv_ucp_Medic", "rhsusf_mbav_medic", "UK3CB_BAF_V_Osprey_Medic_A", "UK3CB_BAF_V_Osprey_Medic_B", "UK3CB_BAF_V_Osprey_Medic_C", "UK3CB_BAF_V_Osprey_Medic_D", "rhsusf_spcs_ocp_medic", "rhsusf_spcs_ucp_medic", "", ""
+    "rhsusf_iotv_ocp_Medic", "rhsusf_iotv_ucp_Medic", "rhsusf_mbav_medic", "UK3CB_BAF_V_Osprey_Medic_A", "UK3CB_BAF_V_Osprey_Medic_B", "UK3CB_BAF_V_Osprey_Medic_C", "UK3CB_BAF_V_Osprey_Medic_D", "rhsusf_spcs_ocp_medic", "rhsusf_spcs_ucp_medic"
 ];
 
 
@@ -1197,7 +1197,8 @@ InA_AllowedArsenal_generalBackpacks = [
     "UK3CB_BAF_B_Bergen_MTP_Rifleman_L_A", "UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B", "UK3CB_BAF_B_Bergen_MTP_Rifleman_L_C", "UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D", "UK3CB_BAF_B_Bergen_MTP_Rifleman_XL_A", "UK3CB_BAF_B_Bergen_MTP_Sapper_H_A", "UK3CB_BAF_B_Bergen_MTP_Sapper_L_A", 
     "UK3CB_BAF_B_Bergen_MTP_SL_H_A", "UK3CB_BAF_B_Bergen_MTP_SL_L_A", "UK3CB_BAF_B_Bergen_OLI_JTAC_A", "UK3CB_BAF_B_Bergen_OLI_JTAC_H_A", "UK3CB_BAF_B_Bergen_OLI_Rifleman_A", "UK3CB_BAF_B_Bergen_OLI_Rifleman_A", "UK3CB_BAF_B_Bergen_OLI_Rifleman_B", "UK3CB_BAF_B_Bergen_OLI_SL_A",
     "UK3CB_BAF_B_Bergen_TAN_JTAC_A", "UK3CB_BAF_B_Bergen_TAN_JTAC_H_A", "UK3CB_BAF_B_Bergen_TAN_Rifleman_A", "UK3CB_BAF_B_Bergen_TAN_Rifleman_B", "UK3CB_BAF_B_Bergen_TAN_SL_A", "UK3CB_BAF_B_Carryall_Arctic", "rhsusf_assault_eagleaiii_coy", "rhsusf_assault_eagleaiii_ocp", 
-    "rhsusf_assault_eagleaiii_ucp", "rhsusf_falconii_coy", "rhsusf_falconii_mc", "rhsusf_falconii", "rhsusf_eject_Parachute_backpack", "UK3CB_BAF_B_Carryall_DDPM", "UK3CB_BAF_B_Carryall_DPMT", "UK3CB_BAF_B_Carryall_DPMW", "UK3CB_BAF_B_Carryall_OLI", "UK3CB_BAF_B_Carryall_MTP", "UK3CB_BAF_B_Carryall_TAN"
+    "rhsusf_assault_eagleaiii_ucp", "rhsusf_falconii_coy", "rhsusf_falconii_mc", "rhsusf_falconii", "rhsusf_eject_Parachute_backpack", "UK3CB_BAF_B_Carryall_DDPM", "UK3CB_BAF_B_Carryall_DPMT", "UK3CB_BAF_B_Carryall_DPMW", "UK3CB_BAF_B_Carryall_OLI", "UK3CB_BAF_B_Carryall_MTP", "UK3CB_BAF_B_Carryall_TAN",
+	"B_Parachute", "rhs_d6_Parachute_backpack", "ACE_NonSteerableParachute", "ACE_TacticalLadder_Pack", "ace_gunbag", "ace_gunbag_Tan"
 ];
 
 
@@ -1223,7 +1224,7 @@ InA_AllowedArsenal_backpackMedic = [
 
 // Static Weapon Backpacks
 InA_AllowedArsenal_backpackStatics = [
-    "RHS_Mk19_Gun_Bag", "RHS_Mk19_Tripod_Bag", "RHS_M2_Gun_Bag", "RHS_M2_Tripod_Bag", "rhs_M252_Gun_Bag", "rhs_M252_Bipod_Bag"
+    "RHS_Mk19_Gun_Bag", "RHS_Mk19_Tripod_Bag", "RHS_M2_Gun_Bag", "RHS_M2_Tripod_Bag", "rhs_M252_Gun_Bag", "rhs_M252_Bipod_Bag", "rhs_Tow_Gun_Bag", "rhs_TOW_Tripod_Bag", "RHS_M2_MiniTripod_Bag"
 ];
 
 

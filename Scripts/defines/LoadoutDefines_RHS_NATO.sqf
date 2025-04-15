@@ -304,12 +304,15 @@ switch (_unitType) do {
             ["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_JHP",17],[],""],
             ["rhs_uniform_acu_oefcp",[
                 ["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_elasticBandage",10],["ACE_CableTie",4],["ACE_EarPlugs",1],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_MapTools",1],["ACE_microDAGR",1],
-                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]]],["rhsusf_iotv_ocp_Rifleman",[["rhsusf_ANPVS_14",1],["rhs_mag_30Rnd_556x45_M855_Stanag",3,30]
+                ["ACE_Flashlight_XL50",1],["ACE_tourniquet",2],["ACE_splint",2],["ACE_PlottingBoard",1]
                 ]],
-            [],
-            "rhsusf_patrolcap_ocp","rhs_googles_black",
-            ["ACE_VectorDay","","","",[],[],""],
-            ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]
+            ["rhsusf_iotv_ocp_Rifleman",[
+                ["rhsusf_ANPVS_14",1],["rhs_mag_30Rnd_556x45_M855_Stanag",3,30]
+                ]],
+            ["B_UAV_01_backpack_F",[]],
+            "rhsusf_patrolcap_ocp","",
+            ["UK3CB_BAF_Soflam_Laserdesignator","","","",["Laserbatteries",1],[],""],
+            ["ItemMap","B_UavTerminal","ItemRadio","ItemCompass","ItemWatch",""]
         ];
     };
 
