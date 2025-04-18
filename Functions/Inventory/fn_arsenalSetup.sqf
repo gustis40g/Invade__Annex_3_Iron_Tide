@@ -114,7 +114,7 @@ _arsenal addAction [
     "<t color='#44ff44' size='1.1' font='PuristaMedium'><img size='1.1' image='\a3\ui_f\data\IGUI\Cfg\Actions\reammo_ca.paa' /> Load saved loadout</t>",
     {
         params ["_target", "_caller", "_actionId", "_arguments"];
-        private _loadout = (missionNamespace getVariable "InA_PlayerLoadout");
+        private _loadout = (missionNamespace getVariable "AW_savedLoadout");
         _caller setUnitLoadout _loadout;
     },
     nil,
@@ -123,7 +123,7 @@ _arsenal addAction [
     true,
     "",
     (toString {
-        (isNull (objectParent _this)) && {!isNil {missionNamespace getVariable "InA_PlayerLoadout"}}
+        (isNull (objectParent _this)) && {!isNil {missionNamespace getVariable "AW_savedLoadout"}}
     }),
     5
 ];

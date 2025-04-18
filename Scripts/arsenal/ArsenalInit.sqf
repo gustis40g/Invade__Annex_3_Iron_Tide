@@ -42,9 +42,12 @@ private _openEH = ["ace_arsenal_displayOpened", {
 }] call CBA_fnc_addEventHandler;
 
 private _closeEH = ["ace_arsenal_displayClosed", {   
-    [true] call AW_fnc_cleanInventory;
-    [] spawn AW_fnc_inventoryInformation;
+    [player] call AW_fnc_persistentLoadoutSet;
     AW_savedLoadout = getUnitLoadout player;
+    missionNamespace setVariable ["InA_PlayerLoadout", (getUnitLoadout player)];
+    
+    [true] call AW_fnc_cleanInventory;
+    0 = [] spawn AW_fnc_inventoryInformation;
 
     // TFAR radio handling
     if (!isNil "TFAR_core") then {

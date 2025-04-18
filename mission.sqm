@@ -3690,7 +3690,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="media\billboards\PFAd.paa";
+											value="media\billboards\teammates.paa";
 										};
 									};
 								};
@@ -3737,7 +3737,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="media\billboards\PFAd.paa";
+											value="media\billboards\teammates.paa";
 										};
 									};
 								};
@@ -3922,7 +3922,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="media\billboards\AWETeamplay.paa";
+											value="media\billboards\InATest.paa";
 										};
 									};
 								};
@@ -4062,7 +4062,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="media\billboards\AWETeamplay.paa";
+											value="media\billboards\InATest.paa";
 										};
 									};
 								};
@@ -4202,7 +4202,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="media\billboards\AWETeamplay.paa";
+											value="media\billboards\InATest.paa";
 										};
 									};
 								};
@@ -4342,7 +4342,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="media\billboards\AWETeamplay.paa";
+											value="media\billboards\InATest.paa";
 										};
 									};
 								};
@@ -4436,7 +4436,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="media\billboards\PFAd.paa";
+											value="media\billboards\teammates.paa";
 										};
 									};
 								};
@@ -4483,7 +4483,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="media\billboards\PFAd.paa";
+											value="media\billboards\teammates.paa";
 										};
 									};
 								};
@@ -12525,7 +12525,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="media\billboards\PFAd.paa";
+							value="media\billboards\teammates.paa";
 						};
 					};
 				};
@@ -12664,7 +12664,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="media\billboards\AWETeamplay.paa";
+							value="media\billboards\InATest.paa";
 						};
 					};
 				};
@@ -12711,7 +12711,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="media\billboards\AWETeamplay.paa";
+							value="media\billboards\InATest.paa";
 						};
 					};
 				};
@@ -12804,7 +12804,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="media\billboards\JoinAWE.paa";
+							value="media\billboards\InATest.paa";
 						};
 					};
 				};
@@ -12897,7 +12897,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="media\billboards\steam.paa";
+							value="media\billboards\InATest.paa";
 						};
 					};
 				};
@@ -12943,7 +12943,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="media\billboards\JoinAWE.paa";
+							value="media\billboards\InATest.paa";
 						};
 					};
 				};
@@ -25168,7 +25168,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="media\billboards\PFAd.paa";
+							value="media\billboards\teammates.paa";
 						};
 					};
 				};
@@ -25214,7 +25214,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="media\billboards\PFAd.paa";
+							value="media\billboards\teammates.paa";
 						};
 					};
 				};
@@ -28438,6 +28438,7 @@ class Mission
 			class Attributes
 			{
 				disableSimulation=1;
+				createAsSimpleObject=1;
 			};
 			id=4849;
 			type="rhsusf_f22";
@@ -28485,6 +28486,7 @@ class Mission
 			class Attributes
 			{
 				disableSimulation=1;
+				createAsSimpleObject=1;
 			};
 			id=4850;
 			type="rhsusf_f22";
@@ -28532,6 +28534,7 @@ class Mission
 			class Attributes
 			{
 				disableSimulation=1;
+				createAsSimpleObject=1;
 			};
 			id=4851;
 			type="rhsusf_f22";
@@ -28614,6 +28617,7 @@ class Mission
 			class Attributes
 			{
 				disableSimulation=1;
+				createAsSimpleObject=1;
 			};
 			id=4874;
 			type="rhsusf_CH53e_USMC_D_cargo";

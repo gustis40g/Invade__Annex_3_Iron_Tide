@@ -251,10 +251,10 @@ class Altis {
                 arsenal = "aac_pl_arsenal";
 
                 vehicles[] = {
-                    {"RHS_UH60M_ESSS_d", "aac_heli1", 600},
+                    {"HELI_LCAS", "aac_heli1", 900},
                     {"RHS_MELB_MH6M", "aac_heli2", 300},
                     {"HELI_BIG", "aac_heli3", 300},
-                    {"UK3CB_BAF_Wildcat_AH1_CAS_8D_DDPM", "aac_heli4", 300},
+                    {"RHSGREF_A29B_HIDF", "aac_heli4", 1800},
                     {"RHS_M6", "aac_veh1", 1800},
                     {"ARMOR_IFV", "aac_veh2", 900},
                     {"CAR_MRAP", "aac_veh3", 120},
@@ -287,7 +287,7 @@ class Altis {
 
                 vehicles[] = {
                     {"HELI_CAS", "sdm_heli1", 3600},
-                    {"RHS_UH1Y_FFAR_d", "sdm_heli2", 300},
+                    {"HELI_LCAS", "sdm_heli2", 900},
                     {"HELI_MED", "sdm_heli3", 300},
                     {"CAR_MRAP", "sdm_veh1", 120},
                     {"CAR_MRAP", "sdm_veh2", 120},
@@ -325,7 +325,7 @@ class Altis {
                     {"JET_CAS", "mol_jet_spawn", 3600},
                     {"HELI_BIG", "mol_heli1", 300},
                     {"HELI_LCAS", "mol_heli2", 900},
-                    {"UK3CB_BAF_Wildcat_AH1_HEL_8A_DDPM", "mol_heli3", 300},
+                    {"HELI_MED", "mol_heli3", 300},
                     {"ARMOR_TANK", "mol_veh1", 1800},
                     {"CAR_MRAP", "mol_veh2", 120},
                     {"CAR_MRAP", "mol_veh3", 120},
@@ -360,8 +360,8 @@ class Altis {
 
                 vehicles[] = {
                     {"RHS_MELB_MH6M", "mikael_heli_01", 300},
-                    {"RHS_MELB_AH6M", "mikael_heli_02", 600},
-                    {"UK3CB_BAF_Wildcat_HMA2_TRN_8A_DDPM", "mikael_heli_03", 300},
+                    {"HELI_LCAS", "mikael_heli_02", 900},
+                    {"HELI_MED", "mikael_heli_03", 300},
                     {"CAR_LSV", "mikael_car_01", 60},
                     {"CAR_LSV", "mikael_car_02", 60},
                     {"CAR_LSV", "mikael_car_03", 60},

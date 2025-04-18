@@ -74,10 +74,10 @@ switch (_rewardId) do {
     case 104: {
         _vehicle = CV("rhsusf_f22");
 
-        [_vehicle] call AW_fnc_vehicleCustomization;
+        [_vehicle, "CAS"] call AW_fnc_vehicleCustomization;
     };
 
-    // F/A-181 Black Wasp II (Stealth)
+    // F-22 Raptor (CAP)
     case 106: {
         _vehicle = CV("rhsusf_f22");
 
@@ -177,14 +177,14 @@ switch (_rewardId) do {
 
     // UH-60M Black Hawk (ESSS)
     case 207: {
-        _vehicle = CV("RHS_UH60M_ESSS_d");
+        _vehicle = CV("RHS_UH60M_ESSS");
 
         [_vehicle] call AW_fnc_vehicleCustomization;
     };
 
     // AW159 Wildcat AH1 (CAS)
     case 208: {
-        _vehicle = CV("UK3CB_BAF_Wildcat_AH1_CAS_8A_DDPM");
+        _vehicle = CV("UK3CB_BAF_Wildcat_AH1_HEL_8A");
 
         [_vehicle] call AW_fnc_vehicleCustomization;
     };

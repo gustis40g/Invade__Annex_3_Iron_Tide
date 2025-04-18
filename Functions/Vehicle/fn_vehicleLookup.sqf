@@ -55,10 +55,11 @@ switch (_vehKey) do {
 
     case "HELI_LCAS": {
         _vehType = selectRandomWeighted [
-            "RHS_UH1Y_FFAR_d", 2,
-            "RHS_UH60M_ESSS_d", 3,
+            "RHS_UH1Y", 2,
+            "RHS_UH60M_ESSS", 3,
             "RHS_MELB_AH6M", 3,
-            "UK3CB_BAF_Wildcat_AH1_CAS_8D_DDPM", 1
+            "UK3CB_BAF_Wildcat_AH1_CAS_8A", 1,
+            "UK3CB_BAF_Wildcat_AH1_HEL_8A", 1
         ];
 
         _typeDesc = "Attack Heli (Light)";
@@ -67,9 +68,9 @@ switch (_vehKey) do {
     // Heli Transport
     case "HELI_MED": {
         _vehType = selectRandomWeighted [
-            "UK3CB_BAF_Wildcat_HMA2_TRN_8A_DDPM", 2,
+            "UK3CB_BAF_Wildcat_HMA2_TRN_8A", 2,
             "RHS_UH60M", 3,
-            "RHS_UH1Y_d", 2
+            "RHS_UH1Y_UNARMED", 2
         ];
 
         _typeDesc = "Heli (Medium)";
@@ -77,8 +78,8 @@ switch (_vehKey) do {
 
     case "HELI_BIG": {
         _vehType = selectRandomWeighted [
-            "UK3CB_BAF_Merlin_HC4_18_GPMG_DDPM", 3,
-            "rhsusf_CH53E_USMC_D", 1,
+            "UK3CB_BAF_Merlin_HC4_18_GPMG", 3,
+            "rhsusf_CH53E_USMC_GAU21_D", 1,
             "RHS_CH_47F", 2
         ];
 
@@ -189,9 +190,10 @@ switch (_vehKey) do {
     };
 
     case "ARMOR_IFV": {
-        _vehType = selectRandom [
-            "RHS_M2A3",
-            "RHS_M2A3_BUSKIII"
+        _vehType = selectRandomWeighted [
+            "RHS_M2A3", 2,
+            "RHS_M2A3_BUSKIII", 2,
+            "UK3CB_BAF_Warrior_A3_D_Cage_Camo", 1
         ];
 
         _typeDesc = "Armor (IFV)";
@@ -204,7 +206,21 @@ switch (_vehKey) do {
             "rhsusf_m1240a1_usarmy_d", 3,
             "rhsusf_m1240a1_m2crows_usarmy_d", 2,
             "rhsusf_m1240a1_mk19_uik_usarmy_d", 2,
-            "rhsusf_m1240a1_mk19crows_usarmy_d", 1
+            "rhsusf_m1240a1_mk19crows_usarmy_d", 1,
+            "rhsusf_M1117_D", 1,
+            "rhsusf_M1220_M153_MK19_usarmy_d", 1,
+            "rhsusf_M1220_M153_M2_usarmy_d", 1,
+            "rhsusf_M1230_MK19_usarmy_d", 1,
+            "rhsusf_M1238A1_M2_socom_d", 1,
+            "rhsusf_m1245_m2crows_socom_deploy", 1,
+            "rhsusf_m1245_mk19crows_socom_deploy", 1,
+            "rhsusf_M1239_M2_Deploy_socom_d", 1,
+            "rhsusf_M1239_MK19_Deploy_socom_d", 1,
+            "UK3CB_BAF_Coyote_Passenger_L111A1_D2", 1,
+            "UK3CB_BAF_Coyote_Logistics_L111A1_D2", 1,
+            "UK3CB_BAF_Husky_Passenger_HMG_Sand", 1,
+            "UK3CB_BAF_Jackal2_L111A1_D", 1,
+            "UK3CB_BAF_Panther_GPMG_Sand_A", 1
         ];
 
         _typeDesc = "Car (MRAP)";
@@ -212,10 +228,16 @@ switch (_vehKey) do {
 
     case "CAR_LSV": {
         _vehType = selectRandomWeighted [
-            "rhsusf_m1151_m2crows_usarmy_d", 1,
+            "rhsusf_m1151_m2crows_usarmy_d", 2,
+            "rhsusf_m1151_mk19crows_usarmy_d", 2,
             "rhsusf_m1165_usarmy_d", 2,
             "rhsusf_m998_d_4dr", 2,
-            "rhsusf_m998_d_2dr", 2
+            "rhsusf_m998_d_2dr", 2,
+            "rhsusf_m966_d", 2,
+            "rhsusf_m1165a1_gmv_m134d_m240_socom_d", 2,
+            "UK3CB_BAF_LandRover_WMIK_Milan_FFR_Sand_A", 2,
+            "UK3CB_BAF_LandRover_WMIK_HMG_FFR_Sand_A", 2,
+            "UK3CB_BAF_LandRover_Soft_FFR_Sand_A", 2
         ];
 
         _typeDesc = "Car (LSV)";

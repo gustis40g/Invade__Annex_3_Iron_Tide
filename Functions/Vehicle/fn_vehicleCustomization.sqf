@@ -617,6 +617,248 @@ switch (typeOf _vehicle) do {
         [_vehicle, _pylonsArray] remoteExec ["AW_fnc_setPylonLoadout", _vehicle];
     };
 
+    // A-10A (CAS)
+    case "RHS_A10": {
+
+        private _first = "rhs_mag_Sidewinder_2";
+        private _second = (selectRandomWeighted ["rhs_mag_M151_7_USAF_LAU131", 3, "rhs_mag_FFAR_7_USAF", 3, "rhs_mag_gbu12", 2]);
+        private _third = (selectRandomWeighted ["rhs_mag_agm65d_3", 2, "rhs_mag_agm65h_3", 2, "rhs_mag_FFAR_21_USAF_LAU68_3", 1]);
+        private _forth = (selectRandomWeighted ["rhs_mag_gbu12", 2, "rhs_mag_M151_21_USAF_LAU131_3", 2, "rhs_mag_mk82_3", 1]);
+        private _fifth = "rhs_mag_gbu12";
+
+        private _pylonsArray = [];
+
+        _pylonsArray pushBack [1, "rhs_mag_ANALQ131"];
+        _pylonsArray pushBack [11, _first];
+
+        _pylonsArray pushBack [2, _second];
+        _pylonsArray pushBack [10, _second];
+
+        _pylonsArray pushBack [3, _third];
+        _pylonsArray pushBack [9, _third];
+
+        _pylonsArray pushBack [4, _forth];
+        _pylonsArray pushBack [8, _forth];
+
+        _pylonsArray pushBack [5, _fifth];
+        _pylonsArray pushBack [7, _fifth];
+
+        [_vehicle, _pylonsArray] remoteExec ["AW_fnc_setPylonLoadout", _vehicle];
+
+        _vehicle setVariable ["InA_AssetType", "CAS", true];
+    };
+
+    // F-22A
+    case "rhsusf_f22": {
+        [_vehicle] call AW_fnc_vehicleApperanceApply;
+
+        private _assetType = "CAP";
+        private _pylonsArray = [];
+
+        if (!isNil "_type" && {_type in ["CAS", "JET_CAS"]}) then {
+            // CAS
+            private _outer = "rhs_mag_Sidewinder_int";
+            private _middle = (selectRandom ["rhs_mag_aim120d_int"]);
+            private _inner = (selectRandom ["rhs_mag_gbu32"]);
+
+            _pylonsArray pushBack [1, _outer];
+            _pylonsArray pushBack [6, _outer];
+
+            _pylonsArray pushBack [2, _middle];
+            _pylonsArray pushBack [5, _middle];
+
+            _pylonsArray pushBack [3, _inner];
+            _pylonsArray pushBack [4, _inner];
+
+            _assetType = "CAS";
+        } else {
+            // CAP
+            private _outer = "rhs_mag_Sidewinder_int";
+            private _middle = (selectRandom ["rhs_mag_aim120d_int"]);
+            private _innerl = (selectRandom ["rhs_mag_aim120d_2_F22_l", "rhs_mag_aim120d_int"]);
+            private _innerr = (selectRandom ["rhs_mag_aim120d_2_F22_r", "rhs_mag_aim120d_int"]);
+
+            _pylonsArray pushBack [1, _outer];
+            _pylonsArray pushBack [6, _outer];
+
+            _pylonsArray pushBack [2, _middle];
+            _pylonsArray pushBack [5, _middle];
+
+            _pylonsArray pushBack [3, _innerl];
+            _pylonsArray pushBack [4, _innerr];
+        };
+
+        [_vehicle, _pylonsArray] remoteExec ["AW_fnc_setPylonLoadout", _vehicle];
+
+        _vehicle setVariable ["InA_AssetType", _assetType, true];
+    };
+
+    // F-16C Strike Viper (CAS)
+    case "PRACS_F16CJR": {
+
+        private _first = (selectRandomWeighted ["PRACS_Python_5_WT_X1", 3, "PRACS_AIM9M_WT_X1", 3, "PRACS_AIM120_WT_X1", 2]);
+        private _second = (selectRandomWeighted ["PRACS_AIM120_WT_X1", 3, "PRACS_Python_5_WT_X1", 3, "PRACS_AIM9M_WT_X1", 2]);
+        private _third = (selectRandomWeighted ["PRACS_AGM65_TL_X3", 2, "PRACS_AGM65_F_X3", 2, "PRACS_AGM142_X1", 1]);
+        private _forth = (selectRandomWeighted ["PRACS_GBU24_X1", 2, "PRACS_GBU12_X3", 2, "PRACS_BLU1B_X3", 1, "PRACS_AGM142_X1", 1]);
+
+        private _pylonsArray = [];
+
+        _pylonsArray pushBack [1, _first];
+        _pylonsArray pushBack [2, _first];
+
+        _pylonsArray pushBack [3, _second];
+        _pylonsArray pushBack [4, _second];
+
+        _pylonsArray pushBack [5, _third];
+        _pylonsArray pushBack [6, _third];
+
+        _pylonsArray pushBack [7, _forth];
+        _pylonsArray pushBack [8, _forth];
+
+        _pylonsArray pushBack [9, (selectRandom ["PRACS_F16_Bellytank_X1", ""])];
+        _pylonsArray pushBack [10, (selectRandom ["PRACS_F16_CFT_X1", ""])];
+
+        [_vehicle, _pylonsArray] remoteExec ["AW_fnc_setPylonLoadout", _vehicle];
+
+        _vehicle setVariable ["InA_AssetType", "CAS", true];
+    };
+
+    // F-16C Sahrani Viper (CAP)
+    case "PRACS_F16": {
+
+        private _first = (selectRandomWeighted ["PRACS_Python_5_WT_X1", 3, "PRACS_AIM9M_WT_X1", 3, "PRACS_AIM120_WT_X1", 2]);
+        private _second = (selectRandomWeighted ["PRACS_AIM120_WT_X1", 3, "PRACS_Python_5_WT_X1", 3, "PRACS_AIM9M_WT_X1", 2]);
+        private _third = (selectRandomWeighted ["PRACS_AIM120_X2", 2, "PRACS_Python_5_X1", 2]);
+        private _forth = (selectRandomWeighted ["PRACS_AIM120_X2", 2, "PRACS_Python_5_X1", 2]);
+
+        private _pylonsArray = [];
+
+        _pylonsArray pushBack [1, _first];
+        _pylonsArray pushBack [2, _first];
+
+        _pylonsArray pushBack [3, _second];
+        _pylonsArray pushBack [4, _second];
+
+        _pylonsArray pushBack [5, _third];
+        _pylonsArray pushBack [6, _third];
+
+        _pylonsArray pushBack [7, _forth];
+        _pylonsArray pushBack [8, _forth];
+
+        _pylonsArray pushBack [9, (selectRandom ["PRACS_F16_Bellytank_X1", ""])];
+        _pylonsArray pushBack [10, (selectRandom ["PRACS_F16_CFT_X1", ""])];
+
+        [_vehicle, _pylonsArray] remoteExec ["AW_fnc_setPylonLoadout", _vehicle];
+    };
+
+    // Su-57 (CAP)
+    case "RHS_T50_vvs_blueonblue": {
+        [_vehicle] call AW_fnc_vehicleApperanceApply;
+
+        private _pylonsArray = [];
+
+        _pylonsArray pushBack [1, "rhs_mag_R77M"];
+        _pylonsArray pushBack [2, "rhs_mag_R77M"];
+        _pylonsArray pushBack [3, "rhs_mag_R77M"];
+        _pylonsArray pushBack [4, "rhs_mag_R77M"];
+        _pylonsArray pushBack [5, "rhs_mag_R74M2_int"];
+        _pylonsArray pushBack [6, "rhs_mag_R74M2_int"];
+
+        [_vehicle, _pylonsArray] remoteExec ["AW_fnc_setPylonLoadout", _vehicle];
+    };
+
+    // Su-57 (CAS)
+    case "RHS_T50_vvs_generic_ext": {
+
+        private _first = (selectRandomWeighted ["rhs_mag_Kh38mte_int", 3, "rhs_mag_Kh38mae_int", 3, "rhs_mag_Kh38mle_int", 2]);
+        private _second = (selectRandomWeighted ["rhs_mag_Kh38mte_int", 3, "rhs_mag_Kh38mae_int", 3, "rhs_mag_Kh38mle_int", 2]);
+        private _third = (selectRandomWeighted ["rhs_mag_fab500_bd3_usk_a", 2, "rhs_mag_fab500_m54_bd3_usk_a", 2, "rhs_weap_rbk500_spbed", 1, "rhs_weap_rbk500_ptab1m", 1]);
+        private _forth = (selectRandomWeighted ["rhs_mag_Kh38mte", 2, "rhs_mag_Kh38mae", 2, "rhs_mag_Kh38mle", 1]);
+
+        private _pylonsArray = [];
+
+        _pylonsArray pushBack [1, _first];
+        _pylonsArray pushBack [2, _first];
+
+        _pylonsArray pushBack [3, _second];
+        _pylonsArray pushBack [4, _second];
+
+        _pylonsArray pushBack [5, "rhs_mag_R74M2_int"];
+        _pylonsArray pushBack [6, "rhs_mag_R74M2_int"];
+
+        _pylonsArray pushBack [7, _third];
+        _pylonsArray pushBack [8, _third];
+
+        _pylonsArray pushBack [9, _forth];
+        _pylonsArray pushBack [10, _forth];
+
+        _pylonsArray pushBack [11, "rhs_mag_R77M_AKU170"];
+        _pylonsArray pushBack [12, "rhs_mag_R77M_AKU170"];
+
+        [_vehicle, _pylonsArray] remoteExec ["AW_fnc_setPylonLoadout", _vehicle];
+
+        _vehicle setVariable ["InA_AssetType", "CAS", true];
+    };
+
+    // Mirage V
+    case "PRACS_MirageV": {
+        [_vehicle] call AW_fnc_vehicleApperanceApply;
+
+        private _assetType = "CAP";
+        private _pylonsArray = [];
+
+        _pylonsArray pushBack [4, "PylonWeapon_300Rnd_20mm_shells"];
+
+        if (!isNil "_type" && {_type in ["CAS", "JET_CAS"]}) then {
+            // CAS
+            private _outer = "PRACS_Python_5_X1";
+            private _middle = (selectRandom ["PRACS_AGM65_TL_X2", "PRACS_AGM65_F_X2", "PRACS_GBU8_X1", "PRACS_GBU16_X1"]);
+            private _inner = (selectRandom ["PRACS_AGM65_TL_X2", "PRACS_AGM65_F_X2", "PRACS_GBU8_X1", "PRACS_GBU16_X1"]);
+            private _tail = (selectRandom ["PRACS_M117_X1", "PRACS_Mk82_snake_X1"]);
+            private _center = (selectRandom ["PRACS_AGM142_X1", "PRACS_BLU1B_X6", "PRACS_Delilah_X1"]);
+
+            _pylonsArray pushBack [1, _outer];
+            _pylonsArray pushBack [2, _outer];
+
+            _pylonsArray pushBack [3, _middle];
+            _pylonsArray pushBack [4, _middle];
+
+            _pylonsArray pushBack [5, _inner];
+            _pylonsArray pushBack [6, _inner];
+
+            _pylonsArray pushBack [7, _tail];
+            _pylonsArray pushBack [8, _tail];
+
+            _pylonsArray pushBack [9, _center];
+
+
+            _assetType = "CAS";
+        } else {
+            // CAP
+            private _outer = (selectRandom ["PRACS_Python_5_X1", "PRACS_AIM9M_X1"]);
+            private _middle = (selectRandom ["PRACS_Python_5_X1", "PRACS_AIM9M_X1", "PRACS_R530D_X1", "PRACS_R530_IR_X1"]);
+            private _inner = (selectRandom ["PRACS_Python_5_X1", "PRACS_AIM9M_X1", "PRACS_R530_IR_X1"]);
+            private _center = (selectRandom ["PRACS_Python_5_X1", "PRACS_R530D_X1", "PRACS_R530_IR_X1"]);
+
+            _pylonsArray pushBack [1, _outer];
+            _pylonsArray pushBack [2, _outer];
+
+            _pylonsArray pushBack [3, _middle];
+            _pylonsArray pushBack [4, _middle];
+
+            _pylonsArray pushBack [5, _inner];
+            _pylonsArray pushBack [6, _inner];
+
+            _pylonsArray pushBack [7, ""];
+            _pylonsArray pushBack [8, ""];
+
+            _pylonsArray pushBack [9, _center];
+        };
+
+        [_vehicle, _pylonsArray] remoteExec ["AW_fnc_setPylonLoadout", _vehicle];
+
+        _vehicle setVariable ["InA_AssetType", _assetType, true];
+    };
 
     /**************/
     /**** UAVs ****/
@@ -870,6 +1112,138 @@ switch (typeOf _vehicle) do {
         ["actions", _vehicle] call AW_fnc_heliTurretsControl;
     };
 
+    // AH-64D Apache
+    case "RHS_AH64D": {
+        private _pylonsArray = [];
+        private _loadout = (selectRandomWeighted [["rhs_mag_AGM114L_4", [0]], 2, ["rhs_mag_AGM114N_4", [0]], 1, ["rhs_mag_AGM114M_4", [0]], 1, ["rhs_mag_AGM114K_4", [0]], 2]);
+
+        {
+            _loadout params ["_mag", "_owner"];
+            _pylonsArray pushBack [_x, _mag, _owner];
+        } forEach [2, 5];
+
+        private _aaLoadout = selectRandom [["rhs_mag_ATAS_AH64_2", [-1]], ["rhs_mag_Sidewinder_heli", [-1]]];
+        {
+                _aaLoadout params ["_mag", "_owner"];
+                _pylonsArray pushBack [_x, _mag, _owner];
+        } forEach [1, 6];
+
+        _loadout = (selectRandomWeighted [["rhs_mag_AGM114L_4", [0]], 2, ["rhs_mag_AGM114N_4", [0]], 1, ["rhs_mag_DAGR_16", [0]], 2, ["rhs_mag_AGM114K_4", [0]], 1]);
+
+        {
+            _loadout params ["_mag", "_owner"];
+            _pylonsArray pushBack [_x, _mag, _owner];
+        } forEach [3, 4];
+
+        [_vehicle, _pylonsArray] remoteExec ["AW_fnc_setPylonLoadout", _vehicle];
+
+        _vehicle setVariable ["InA_AssetType", "CAS", true];
+    };
+
+    // AH-1Z Viper
+    case "RHS_AH1Z": {
+        private _pylonsArray = [];
+        private _loadout = (selectRandomWeighted [["rhs_mag_AGM114K_4", [0]], 3, ["rhs_mag_AGM114M_4", [0]], 1, ["rhs_mag_AGM114N_4", [0]], 1]);
+
+        {
+            _loadout params ["_mag", "_owner"];
+            _pylonsArray pushBack [_x, _mag, _owner];
+        } forEach [2, 5];
+
+        {
+            _pylonsArray pushBack [_x, "rhs_mag_Sidewinder_heli_2", [-1]];
+        } forEach [1, 6];
+
+        _loadout = (selectRandomWeighted [["rhs_mag_AGM114K_4", [0]], 2, ["rhs_mag_AGM114M_4", [0]], 1, ["rhs_mag_AGM114N_4", [0]], 1]);
+
+        {
+            _loadout params ["_mag", "_owner"];
+            _pylonsArray pushBack [_x, _mag, _owner];
+        } forEach [3, 4];
+
+        [_vehicle, _pylonsArray] remoteExec ["AW_fnc_setPylonLoadout", _vehicle];
+
+        _vehicle setVariable ["InA_AssetType", "CAS", true];
+    };
+
+    // Mi-24 Super Hind
+    case "rhsgref_mi24g_CAS": {
+        private _pylonsArray = [];
+
+        private _loadout = (selectRandomWeighted [["rhs_mag_zt3_4", [0]], 1, ["rhs_mag_zt6_4", [0]], 1]);
+
+        {
+            _loadout params ["_mag", "_owner"];
+            _pylonsArray pushBack [_x, _mag, _owner];
+        } forEach [5, 6];
+
+        {
+            _pylonsArray pushBack [_x, "rhs_mag_b8v20a_s8kom", [-1]];
+        } forEach [1, 2, 3, 4];
+
+        [_vehicle, _pylonsArray] remoteExec ["AW_fnc_setPylonLoadout", _vehicle];
+
+        _vehicle setVariable ["InA_AssetType", "CAS", true];
+        _vehicle setVariable ["InA_isGunship", true, true];
+    };
+    
+    case "RHS_UH60M_ESSS": {
+    [_vehicle] call AW_fnc_vehicleApperanceApply;
+    
+    private _pylonsArray = [];
+    private _loadout1 = selectRandomWeighted [
+        ["rhs_mag_DAGR_16", [-1]], 1,
+        ["rhs_mag_AGM114N_4", [-1]], 1,
+        ["rhs_mag_AGM114K_4", [-1]], 1,
+        ["rhs_mag_AGM114M_4", [-1]], 1,
+        ["rhs_mag_ATAS_2", [-1]], 1
+    ];
+    
+    private _loadout2 = selectRandomWeighted [
+        ["rhs_mag_DAGR_16", [-1]], 1,
+        ["rhs_mag_AGM114N_4", [-1]], 1,
+        ["rhs_mag_AGM114K_4", [-1]], 1,
+        ["rhs_mag_AGM114M_4", [-1]], 1,
+        ["rhs_mag_ATAS_2", [-1]], 1
+    ];
+    
+    { _pylonsArray pushBack [_x, _loadout1#0, _loadout1#1] } forEach [1, 4];
+    { _pylonsArray pushBack [_x, _loadout2#0, _loadout2#1] } forEach [2, 3];
+    
+    [_vehicle, _pylonsArray] remoteExec ["AW_fnc_setPylonLoadout", _vehicle];
+
+    };
+
+    // AH-6M Little Bird
+    case "RHS_MELB_AH6M": {
+    [_vehicle] call AW_fnc_vehicleApperanceApply;
+
+    private _pylonsArray = [];
+
+    _pylonsArray pushBack [2, "rhs_mag_m134_pylon_3000", [-1]];
+    _pylonsArray pushBack [3, "rhs_mag_m134_pylon_3000", [-1]];
+
+    private _loadout1 = selectRandomWeighted [
+        ["rhs_mag_M229_19", [-1]], 4,
+        ["rhs_mag_AGM114K_2", [-1]], 2,
+        ["rhs_mag_DAGR_8", [-1]], 1,
+        ["rhsusf_mag_gau19_melb_left", [-1]], 2
+    ];
+    
+    private _loadout2 = selectRandomWeighted [
+        ["rhs_mag_M229_19", [-1]], 4,
+        ["rhs_mag_AGM114K_2", [-1]], 2,
+        ["rhs_mag_DAGR_8", [-1]], 1,
+        ["rhsusf_mag_gau19_melb_right", [-1]], 2
+
+    ];
+
+    _pylonsArray pushBack [1, _loadout1#0, _loadout1#1];
+    _pylonsArray pushBack [4, _loadout2#0, _loadout2#1];
+
+    [_vehicle, _pylonsArray] remoteExec ["AW_fnc_setPylonLoadout", _vehicle];
+
+    };
 
     /***************/
     /**** VTOLs ****/

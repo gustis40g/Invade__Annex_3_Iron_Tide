@@ -21,7 +21,7 @@ InA_Rewards_RewardList = [
     [200, 205, "Mi-24G Super Hind", 2],
     [200, 206, "AH-6M Little Bird", 2],
     [200, 207, "UH-60M Black Hawk (ESSS)", 2],
-    [200, 208, "AW159 Wildcat AH1 (CAS)", 2],
+    [200, 208, "AW159 Wildcat AH1 (CAS - Hellfire)", 2],
 
 
     // VTOLs (There are none D:)
@@ -85,7 +85,8 @@ InA_Rewards_RewardList = [
 
 // Reward blacklist
 InA_Rewards_RewardBlacklist = [
-    501 //UCAV Sentinel
+    501, //UCAV Sentinel
+    111 //Su-25SM
 ];
 
 
