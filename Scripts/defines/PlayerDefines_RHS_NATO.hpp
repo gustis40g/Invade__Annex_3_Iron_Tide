@@ -27,7 +27,7 @@ class Dynamic_Roles {
         customVariables[] = {
 
         };
-        icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManOfficer_ca.paa";
         defaultLoadout[] = {
             {"rhs_weap_m4a1_blockII_M203_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG_d",{"rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30},{"rhs_mag_M433_HEDP",1},"rhsusf_acc_grip_m203_d"},
             {"rhs_weap_M136_hp","","","",{"rhs_m136_hp_mag",1},"",""},
@@ -61,7 +61,7 @@ class Dynamic_Roles {
         customVariables[] = {
             {"ace_medical_medicClass",2,true}
         };
-        icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManMedic_ca.paa";
         defaultLoadout[] = {
             {"rhs_weap_m4a1_blockII_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15_top","rhsusf_acc_eotech_552_d",{"rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30},"","rhsusf_acc_rvg_de"},
             {},
@@ -88,7 +88,7 @@ class Dynamic_Roles {
     };
 
     class repair {
-        name = "Repair";
+        name = "Repair Specialist";
         rank = "Private";
         description = $STR_AW_Repair_Description;
         traits[] = {
@@ -97,7 +97,7 @@ class Dynamic_Roles {
         customVariables[] = {
             {"ace_isEngineer",2,true}
         };
-        icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManEngineer_ca.paa";
         defaultLoadout[] = {
             {"rhs_weap_m4a1_blockII_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15_top","rhsusf_acc_eotech_552_d",{"rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30},"","rhsusf_acc_rvg_de"},
             {},
@@ -132,7 +132,7 @@ class Dynamic_Roles {
         customVariables[] = {
             
         };
-        icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManMG_ca.paa";
         defaultLoadout[] = {
             {"rhs_weap_m249_light_L","rhsusf_acc_SFMB556","rhsusf_acc_anpeq15side_bk","rhsusf_acc_ACOG_RMR",{"rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote",200},"","rhsusf_acc_grip4_bipod"},
             {},
@@ -232,7 +232,7 @@ class Dynamic_Roles {
         customVariables[] = {
             
         };
-        icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManAT_ca.paa";
         defaultLoadout[] = {
             {"rhs_weap_m4a1_blockII_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15_top","rhsusf_acc_ACOG_d",{"rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30},"","rhsusf_acc_rvg_de"},
             {"UK3CB_BAF_Javelin_Slung_Tube","","","",{},"",""},
@@ -265,7 +265,7 @@ class Dynamic_Roles {
         customVariables[] = {
             
         };
-        icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManAT_ca.paa";
         defaultLoadout[] = {
             {"rhs_weap_m4a1_blockII_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15_top","rhsusf_acc_ACOG_d",{"rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30},"","rhsusf_acc_rvg_de"},
             {"ACE_launch_NLAW_ready_F","","","",{"NLAW_F",1},"",""},
@@ -295,7 +295,7 @@ class Dynamic_Roles {
         customVariables[] = {
             
         };
-        icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManLeader_ca.paa";
         defaultLoadout[] = {
             {"rhs_weap_m4a1_blockII_M203_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG_d",{"rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30},{"rhs_mag_M433_HEDP",1},"rhsusf_acc_grip_m203_d"},
             {"rhs_weap_M136_hp","","","",{"rhs_m136_hp_mag",1},"",""},
@@ -330,7 +330,7 @@ class Dynamic_Roles {
         customVariables[] = {
             {"ace_isEngineer",2,true}
         };
-        icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManEngineer_ca.paa";
         defaultLoadout[] = {
             {"rhs_weap_m4a1_blockII_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15_top","rhsusf_acc_eotech_552_d",{"rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30},"","rhsusf_acc_rvg_de"},
             {},
@@ -365,7 +365,7 @@ class Dynamic_Roles {
         customVariables[] = {
             
         };
-        icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManExplosive_ca.paa";
         defaultLoadout[] = {
             {"rhs_weap_m4a1_blockII_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15_top","rhsusf_acc_eotech_552_d",{"rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30},"","rhsusf_acc_rvg_de"},
             {},
@@ -400,7 +400,7 @@ class Dynamic_Roles {
         customVariables[] = {
             
         };
-        icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManLeader_ca.paa";
         defaultLoadout[] = {
             {"rhs_weap_hk416d145_m320","rhsusf_acc_nt4_black","","rhsusf_acc_ACOG_RMR",{"rhs_mag_30Rnd_556x45_M855A1_PMAG",30},{"rhs_mag_M433_HEDP",1},""},
             {"rhs_weap_M136_hp","","","",{},"",""},
@@ -431,7 +431,7 @@ class Dynamic_Roles {
         customVariables[] = {
             {"ace_medical_medicClass",2,true}
         };
-        icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManMedic_ca.paa";
         defaultLoadout[] = {
             {"rhs_weap_hk416d145","rhsusf_acc_nt4_black","","rhsusf_acc_ACOG_RMR",{"rhs_mag_30Rnd_556x45_M855A1_PMAG",30},"","rhsusf_acc_rvg_blk"},
             {},
@@ -530,7 +530,7 @@ class Dynamic_Roles {
         customVariables[] = {
             
         };
-        icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManAT_ca.paa";
         defaultLoadout[] = {
             {"rhs_weap_hk416d145","rhsusf_acc_nt4_black","","rhsusf_acc_ACOG_RMR",{"rhs_mag_30Rnd_556x45_M855A1_PMAG",30},"","rhsusf_acc_rvg_blk"},
             {"UK3CB_BAF_Javelin_Slung_Tube","","","",{},"",""},
@@ -561,7 +561,7 @@ class Dynamic_Roles {
         customVariables[] = {
             
         };
-        icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManExplosive_ca.paa";
         defaultLoadout[] = {
             {"rhs_weap_hk416d145","rhsusf_acc_nt4_black","","rhsusf_acc_ACOG_RMR",{"rhs_mag_30Rnd_556x45_M855A1_PMAG",30},"","rhsusf_acc_rvg_blk"},
             {},
@@ -596,7 +596,7 @@ class Dynamic_Roles {
         customVariables[] = {
             
         };
-        icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManRecon_ca.paa";
         defaultLoadout[] = {
             {"rhs_weap_XM2010_sa","rhsusf_acc_M2010S_sa","rhsusf_acc_anpeq15side","rhsusf_acc_premier_mrds",{"rhsusf_5Rnd_300winmag_xm2010",5},"","rhsusf_acc_harris_bipod"},
             {},
@@ -661,7 +661,7 @@ class Dynamic_Roles {
         customVariables[] = {
             {"InA_isFSGGunner", true, true}
         };
-        icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManVirtual_ca.paa";
         defaultLoadout[] = {
             {"rhs_weap_mk18_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15_top","rhsusf_acc_eotech_552_d",{"rhs_mag_30Rnd_556x45_M855_Stanag",30},"","rhsusf_acc_rvg_de"},
             {},
@@ -694,7 +694,7 @@ class Dynamic_Roles {
         customVariables[] = {
             
         };
-        icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManVirtual_ca.paa";
         defaultLoadout[] = {
             {"rhs_weap_mk18_d","rhsusf_acc_nt4_tan","rhsusf_acc_anpeq15_top","rhsusf_acc_eotech_552_d",{"rhs_mag_30Rnd_556x45_M855_Stanag",30},"","rhsusf_acc_rvg_de"},
             {},

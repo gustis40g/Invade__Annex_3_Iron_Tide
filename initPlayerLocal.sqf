@@ -384,7 +384,7 @@ if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
     rwt_chatcom_main_eh = (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call RWT_fnc_chatcomVerify"];
 };
 
-0 = execVM "scripts\misc\QS_icons.sqf";          // Icons
+0 = execVM "Scripts\icons\drawTeam.sqf";          // Icons
 0 = execVM "scripts\misc\diary.sqf";             // Diary
 // 0 = execVM "scripts\misc\earplugs.sqf";          // Earplugs
 
