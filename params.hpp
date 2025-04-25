@@ -46,14 +46,14 @@ class EnemyFaction {
     title = "Enemy faction, defines enemy units, groups and vehicles";
     values[] = FACTION_VALUES;
     texts[] = FACTION_TEXTS;
-    default = 6;
+    default = 0;
 };
 
 class FactionRandomization {
     title = "Randomize enemy faction";
     values[] = {1, 2};
     texts[] = {"Randomize at mission start", "Randomize each AO"};
-    default = 1;
+    default = 2;
 };
 
 class MissionSpawnRange {

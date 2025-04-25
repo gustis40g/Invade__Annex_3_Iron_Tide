@@ -29,7 +29,8 @@ _factionMapping insert [
     ["#side", east],
     ["#aux_factions", ["CDF", "RACS"]],
     ["#aux_faction_weights", [1, 1.5]],
-    ["#indep_factions", ["CDF", "RACS"]]
+    ["#indep_factions", ["CDF", "RACS"]],
+    ["#addons", ["rhs_main", "PRACS_SLA_Core"]]
 ];
 
 
@@ -153,7 +154,10 @@ _vehMRAPs = [
     "rhs_tigr_sts_3camo_vdv", 3,
     "rhs_tigr_sts_vdv", 2.25,
     "rhsgref_BRDM2_vdv", 2.75,
-    "rhsgref_BRDM2_ATGM_vdv", 2.5
+    "PRACS_SLA_BTR40_AT", 2,
+    "rhs_btr80_vdv", 2,
+    "PRACS_SLA_UAZ_AT", 2,
+    "PRACS_SLA_UAZ_SPG9", 2
 ];
 
 // IFVs
@@ -169,17 +173,18 @@ _vehIFVs = [
 // AAs
 _vehSPAAs = [
     "rhs_zsu234_aa", 2,
-    "PRACS_SLA_2S6M_Tunguska", 1,
-    "PRACS_SLA_SA13", 1,
-    "PRACS_SLA_SA9", 1,
-    "PRACS_SLA_SA8", 1
+    "PRACS_SLA_2S6M_Tunguska", 1.5,
+    "PRACS_SLA_SA13", 2,
+    "PRACS_SLA_SA9", 2,
+    "PRACS_SLA_SA8", 0.5
 ];
 
 // MBTs
 _vehMBTs = [
-    "rhs_t90am_tv", 1,
+    "rhs_t90am_tv", 0.75,
     "rhs_t72be_tv", 0.85,
-    "rhs_t80um", 0.75,
+    "rhs_t80um", 1,
+    "rhs_t90sab_tv", 1,
     "rhs_sprut_vdv", 0.5
 ];
 

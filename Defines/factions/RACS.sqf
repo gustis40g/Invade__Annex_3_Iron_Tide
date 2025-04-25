@@ -25,11 +25,12 @@ private _infantryMappings = createHashMap;
 private _vehicleMappings = createHashMap;
 
 _factionMapping insert [
-    ["#name", "AAF"],
+    ["#name", "RACS"],
     ["#side", independent],
     ["#aux_factions", ["AFRF", "CDF"]],
     ["#aux_faction_weights", [1.5, 1]],
-    ["#indep_factions", ["AFRF", "CDF"]]
+    ["#indep_factions", ["AFRF", "CDF"]],
+    ["#addons", ["PRACS_Core"]]
 ];
 
 
@@ -153,7 +154,10 @@ _vehMRAPs = [
     "PRACS_M1025_M2", 3,
     "PRACS_M1151_Mk19", 2.25,
     "PRACS_M1165_M134_QSB", 2.75,
-    "PRACS_M1117", 2.5
+    "PRACS_M1117", 2.5,
+    "PRACS_M113_M2", 2,
+    "PRACS_M113_mk19", 2,
+    "PRACS_M966_TOW", 2
 ];
 
 // IFVs

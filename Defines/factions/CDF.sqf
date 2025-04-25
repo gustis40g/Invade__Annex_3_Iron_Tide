@@ -29,7 +29,8 @@ _factionMapping insert [
     ["#side", independent],
     ["#aux_factions", ["AFRF", "RACS"]],
     ["#aux_faction_weights", [1.5, 1]],
-    ["#indep_factions", ["AFRF", "RACS"]]
+    ["#indep_factions", ["AFRF", "RACS"]],
+    ["#addons", ["rhsgref_main", "PRACS_SLA_Core"]]
 ];
 
 
@@ -124,7 +125,10 @@ _infantryMappings insert [["#sniper_teams", _srTeams]];
 _vehMRAPs = [
     "rhsgref_cdf_reg_uaz_dshkm", 1,
     "rhsgref_cdf_reg_uaz_ags", 1,
-    "rhsgref_cdf_reg_uaz_spg9", 0.75
+    "rhsgref_cdf_reg_uaz_spg9", 0.75,
+    "rhsgref_BRDM2", 1,
+    "rhsgref_cdf_btr80", 1,
+    "rhsgref_cdf_btr60", 1
 ];
 
 // IFVs
@@ -162,7 +166,8 @@ _vehHelis = [
 
 // Heli CAS
 _vehHeliCAS = [
-    "rhsgref_mi24g_CAS", 1
+    "rhsgref_mi24g_CAS", 1,
+    "rhsgref_cdf_Mi35", 0.75
 ];
 
 // Jets
