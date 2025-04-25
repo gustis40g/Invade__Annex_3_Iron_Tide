@@ -86,7 +86,9 @@ InA_Rewards_RewardList = [
 // Reward blacklist
 InA_Rewards_RewardBlacklist = [
     501, //UCAV Sentinel
-    111 //Su-25SM
+    111, //Su-25SM
+    109, //Mirage CAP they are both broken when they spawn on carrier and get stuck, and overall pretty buggy
+    110 //Mirage CAS
 ];
 
 

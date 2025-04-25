@@ -1,3 +1,10 @@
+/*
+ * Author: Gustis40g
+ * Based on script by Whigital
+ * Reworked original script to work better with RHS vehicles
+ *
+ *
+ */
 params [
     ["_aircraft", objNull],
     ["_pylonArray", []]
