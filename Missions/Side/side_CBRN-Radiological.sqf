@@ -154,11 +154,11 @@ private _compStaff = [
 ];
 
 private _guardUnits = [
-    "rhs_vmf_recon_sergeant",
-    "rhs_vmf_recon_medic",
-    "rhs_vmf_recon_marksman",
-    "rhs_vmf_recon_rifleman",
-    "rhs_vmf_recon_rifleman_lat"
+    "rhs_vdv_recon_sergeant",
+    "rhs_vdv_recon_medic",
+    "rhs_vdv_recon_marksman",
+    "rhs_vdv_recon_rifleman",
+    "rhs_vdv_recon_rifleman_lat"
 ];
 
 private _sideObjs = [];
@@ -203,7 +203,7 @@ private _staffGroup = (createGroup InA_EnemyFactionSide);
     private _pos = (_data # 0);
     private _dir = (_data # 1);
 
-    private _unit = _staffGroup createUnit ["O_engineer_F", _pos, [], 0, "NONE"];
+    private _unit = _staffGroup createUnit ["rhs_vdv_recon_efreitor", _pos, [], 0, "NONE"];
 
     _unit setDir _dir;
     _unit setPosATL _pos;
