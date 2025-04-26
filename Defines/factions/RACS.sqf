@@ -30,6 +30,7 @@ _factionMapping insert [
     ["#aux_factions", ["AFRF", "CDF"]],
     ["#aux_faction_weights", [1.5, 1]],
     ["#indep_factions", ["AFRF", "CDF"]],
+    ["#guer_factions", ["CDF"]],
     ["#addons", ["PRACS_Core"]]
 ];
 

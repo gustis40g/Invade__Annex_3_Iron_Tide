@@ -30,6 +30,7 @@ _factionMapping insert [
     ["#aux_factions", ["CDF", "RACS"]],
     ["#aux_faction_weights", [1, 1.5]],
     ["#indep_factions", ["CDF", "RACS"]],
+    ["#guer_factions", ["CDF"]],
     ["#addons", ["rhs_main", "PRACS_SLA_Core"]]
 ];
 

@@ -217,12 +217,12 @@ _spawnedUnits append _enemyArray;
 private _vicAmount = 0;
 private _staticAmount = 0;
 private _vehicletypes = [
-    "I_G_Offroad_01_armed_F",
-    "I_static_AA_F",
-    "I_static_AT_F",
-    "I_HMG_01_high_F",
-    "I_G_Offroad_01_armed_F",
-    "I_C_Offroad_02_LMG_F"
+    "rhsgref_cdf_reg_uaz_spg9",
+    "rhsgref_cdf_Igla_AA_pod",
+    "rhsgref_cdf_SPG9M",
+    "rhsgref_cdf_DSHKM",
+    "rhsgref_cdf_reg_uaz_dshkm",
+    "rhsgref_cdf_reg_uaz_ags"
 ];
 
 for "_x" from 1 to 5 do {
