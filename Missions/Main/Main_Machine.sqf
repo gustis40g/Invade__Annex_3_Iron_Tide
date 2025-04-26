@@ -120,7 +120,7 @@ while {InA_Server_missionActive} do {
                 _units append _alive;
             } forEach _aoPatrolGroups;
 
-            if ((count _units) <= 15) then {
+            if ((count _units) <= 25) then {
                 {
                     private _group = _x;
 
