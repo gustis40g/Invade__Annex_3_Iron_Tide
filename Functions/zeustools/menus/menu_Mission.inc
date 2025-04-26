@@ -25,24 +25,29 @@ GVAR(medicalState) = {
 
     switch (_action) do {
         case "down": {
-            if !(_unit getVariable ["derp_revive_downed", false]) then {
-                [_unit, "DOWNED"] remoteExecCall ["derp_revive_fnc_switchState", _unit];
+            if ([_unit] call ace_common_fnc_isAwake) then {
+                // Force unconscious with 0 minimum time (can be woken immediately)
+                [_unit, true] call ace_medical_fnc_setUnconscious;
+                
+                // Add some medical effects to make it look realistic
+                [_unit, 0.7] call ace_medical_fnc_adjustPainLevel;
+                _unit setVariable ["ace_medical_bloodVolume", 3.5, true];
+                
+                systemChat format ["Forced %1 unconscious", (name _unit)];
             } else {
-                systemChat format ["%1 is already downed ....", (name _unit)];
+                systemChat format ["%1 is already unconscious", (name _unit)];
             };
         };
 
         case "revive": {
-            if (
-                (_unit getVariable ["derp_revive_downed", false]) && {
-                    !(_unit getVariable ["derp_revive_isDragged", false]) &&
-                    !(_unit getVariable ["derp_revive_isCarried", false])
-                }
-             ) then {
-                 [_unit, "REVIVED"] remoteExecCall ["derp_revive_fnc_switchState", _unit];
-            } else {
-                systemChat format ["%1 isn't unconscious ....", (name _unit)];
-            };
+            // Full heal regardless of state
+            [_unit, _unit] call ace_medical_treatment_fnc_fullHealLocal;
+            
+            // Ensure conscious
+            [_unit, false] call ace_medical_fnc_setUnconscious;
+            
+            
+            systemChat format ["Fully healed %1", (name _unit)];
         };
     };
 };

@@ -19,7 +19,7 @@ private _return = false;
 if (alive _unit) then {
     if (_ctrl) then {
         switch (_key) do {
-            // Ctrl + D: Force unit down ....
+            // Ctrl + D: Force unconscious
             case 32: {
                 private _isPlayer = (isPlayer _unit);
 
@@ -28,38 +28,38 @@ if (alive _unit) then {
                     _return = true;
                 };
 
-                private _isDown = alive _unit && {_unit getvariable ["derp_revive_downed", false] || lifeState _unit == "INCAPACITATED"};
+                private _isUnconscious = _unit getVariable ["ACE_isUnconscious", false];
 
-                if (_isDown) exitWith {
-                    [objNull, "Player already in revive state"] call BIS_fnc_showCuratorFeedbackMessage;
+                if (_isUnconscious) exitWith {
+                    [objNull, "Player is already unconscious"] call BIS_fnc_showCuratorFeedbackMessage;
                     _return = true;
                 };
 
-                [_unit, "DOWNED"] remoteExecCall ["derp_revive_fnc_switchState", _unit];
+                // Force unconscious
+                [_unit, true, 0, true] call ace_medical_fnc_setUnconscious;
                 _return = true;
             };
 
-            // Ctrl + R: Revive downed unit ....
+            // Ctrl + R: Full heal and revive
             case 19: {
-                private _isPlayer = (isPlayer _unit);
-
-                if (!_isPlayer) exitWith {
-                    [objNull, "No player selected"] call BIS_fnc_showCuratorFeedbackMessage;
+                if (!alive _unit || !isPlayer _unit) exitWith {
+                    [objNull, "Target must be a living player"] call BIS_fnc_showCuratorFeedbackMessage;
                     _return = true;
                 };
-
-                private _isDown = alive _unit && {_unit getvariable ["derp_revive_downed", false] || lifeState _unit == "INCAPACITATED"};
-
-                if (!_isDown) exitWith {
-                    [objNull, "Player not in revive state"] call BIS_fnc_showCuratorFeedbackMessage;
-                    _return = true;
+                
+                // Full heal
+                [_unit, _unit] call ace_medical_treatment_fnc_fullHealLocal;
+                
+                // Wake up if unconscious
+                if (_unit getVariable ["ACE_isUnconscious", false]) then {
+                    [_unit, false] call ace_medical_fnc_setUnconscious;
                 };
-
-                [_unit, "REVIVED"] remoteExecCall ["derp_revive_fnc_switchState", _unit];
+                
                 _return = true;
             };
         };
     };
+};
 
     if (_shift) then {
         switch (_key) do {
@@ -91,6 +91,7 @@ if (alive _unit) then {
                 _unit setVectorUp (surfaceNormal _pos);
                 _pos set [2, 0.25];
                 _unit setPosATL _pos;
+                _unit setVelocity [0,0,0]; // Prevent sliding after flip
 
                 _return = true;
             };
@@ -111,6 +112,5 @@ if (alive _unit) then {
             };
         };
     };
-};
 
 _return
