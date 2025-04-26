@@ -36,8 +36,6 @@ _marker setMarkerTypeLocal "mil_end";
 // Disable chatter
 player disableConversation true;
 
-// Local checks
-0 = execVM "scripts\misc\localChecks.sqf";
 
 // Player TK counters
 amountOfTKs = 0;
