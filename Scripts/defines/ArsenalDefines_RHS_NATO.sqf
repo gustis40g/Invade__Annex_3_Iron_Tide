@@ -6,23 +6,37 @@ InA_ArsenalDefinitionsInitialized = false;
 
 // Items, optics and accessories all slots have access to.
 InA_AllowedArsenal_generalItems = [
-    //Picatinny Optics: (est. 1 million ACOGs in here)
+    //Picatinny Optics:
     "RKSL_optic_EOT552", "RKSL_optic_EOT552_C", "RKSL_optic_EOT552X", "RKSL_optic_EOT552X_C",
-    "rhsusf_acc_EOTECH", "rhsusf_acc_g33_T1", "rhsusf_acc_g33_xps3", "rhsusf_acc_g33_xps3_tan", "rhsusf_acc_eotech_xps3",
+    "rhsusf_acc_EOTECH", "rhsusf_acc_eotech_xps3",
     "RKSL_optic_LDS", "RKSL_optic_LDS_C", "UK3CB_BAF_SpecterLDS", "UK3CB_BAF_Kite", "UK3CB_BAF_MaxiKite",
-    "rhsusf_acc_ELCAN", "rhsusf_acc_ELCAN_ard", "rhsusf_acc_ACOG", "rhsusf_acc_ACOG2", "rhsusf_acc_ACOG3", "rhsusf_acc_M2A1", "rhsusf_acc_eotech_552", "rhsusf_acc_eotech_552_d", "rhsusf_acc_eotech_552_wd",
+    "rhsusf_acc_M2A1", "rhsusf_acc_eotech_552", "rhsusf_acc_eotech_552_d", "rhsusf_acc_eotech_552_wd",
     "rhsusf_acc_compm4", "rhsusf_acc_mrds", "rhsusf_acc_mrds_c", "rhsusf_acc_RM05", "RKSL_optic_RMR_MS19", "RKSL_optic_RMR_MS19_FDE", "RKSL_optic_RMR_RM33", "RKSL_optic_RMR_RM33_FDE",
-    "rhsusf_acc_RX01_NoFilter", "rhsgref_acc_RX01_NoFilter_camo", "rhsgref_acc_RX01_camo", "rhsusf_acc_RX01", "rhsusf_acc_RX01_NoFilter_tan", "rhsusf_acc_RX01_tan","rhsusf_acc_su230", "rhsusf_acc_su230_c",
-    "rhsusf_acc_su230_mrds", "rhsusf_acc_su230_mrds_c", "rhsusf_acc_su230a", "rhsusf_acc_su230a_c", "rhsusf_acc_su230a_mrds", "rhsusf_acc_su230a_mrds_c", "rhsusf_acc_ACOG_MDO", "rhsusf_acc_T1_high",
-    "rhsusf_acc_T1_low", "UK3CB_BAF_SUIT", "UK3CB_BAF_SUSAT", "rhsusf_acc_ACOG_d", "rhsusf_acc_ACOG_wd", "rhsusf_acc_ACOG_RMR", "UK3CB_BAF_TA31F", "UK3CB_BAF_TA31F_Hornbill", "UK3CB_BAF_TA648",
+    "rhsusf_acc_RX01_NoFilter", "rhsgref_acc_RX01_NoFilter_camo", "rhsgref_acc_RX01_camo", "rhsusf_acc_RX01", "rhsusf_acc_RX01_NoFilter_tan", "rhsusf_acc_RX01_tan",
+    "rhsusf_acc_T1_high","rhsusf_acc_T1_low", "rhsusf_acc_T1_low_fwd", "UK3CB_BAF_SUIT", "UK3CB_BAF_SUSAT", "UK3CB_BAF_TA31F", "UK3CB_BAF_TA31F_Hornbill", "UK3CB_BAF_TA648",
     "UK3CB_BAF_TA648_308", "optic_MRD_black",
+
+	"rhsusf_acc_ACOG", "rhsusf_acc_ACOG_pip", "rhsusf_acc_ACOG_3d", "rhsusf_acc_ACOG2", "rhsusf_acc_ACOG2_pip", "rhsusf_acc_ACOG2_3d", "rhsusf_acc_ACOG3", "rhsusf_acc_ACOG3_pip", "rhsusf_acc_ACOG3_3d",
+	"rhsusf_acc_ACOG_d","rhsusf_acc_ACOG_d_pip", "rhsusf_acc_ACOG_d_3d", "rhsusf_acc_ACOG_wd","rhsusf_acc_ACOG_wd_pip", "rhsusf_acc_ACOG_wd_3d", "rhsusf_acc_ACOG_RMR","rhsusf_acc_ACOG_RMR_pip","rhsusf_acc_ACOG_RMR_3d",
+	"rhsusf_acc_ACOG_sa", "rhsusf_acc_ACOG_sa_pip", "rhsusf_acc_ACOG_sa_3d", "rhsusf_acc_ACOG_USMC", "rhsusf_acc_ACOG_USMC_pip", "rhsusf_acc_ACOG_USMC_3d", "rhsusf_acc_ACOG2_USMC", "rhsusf_acc_ACOG2_USMC_pip", "rhsusf_acc_ACOG3_USMC_3d",
+	"rhsusf_acc_ACOG3_USMC", "rhsusf_acc_ACOG3_USMC_pip", "rhsusf_acc_ACOG2_USMC_3d", "rhsusf_acc_ACOG_MDO", //1 million ACOGs
+
+	"rhsusf_acc_g33_T1", "rhsusf_acc_g33_T1_flip", "rhsusf_acc_g33_xps3", "rhsusf_acc_g33_xps3_flip", "rhsusf_acc_g33_xps3_tan", "rhsusf_acc_g33_xps3_tan_flip", //G33
+
+	"rhsusf_acc_ELCAN","rhsusf_acc_ELCAN_pip","rhsusf_acc_elcan_3d","rhsusf_acc_ELCAN_ard","rhsusf_acc_ELCAN_ard_pip","rhsusf_acc_elcan_ard_3d","rhsusf_acc_su230", "rhsusf_acc_su230_3d","rhsusf_acc_su230_c", "rhsusf_acc_su230_c_3d",
+	"rhsusf_acc_su230_mrds", "rhsusf_acc_su230_mrds_3d","rhsusf_acc_su230_mrds_c", "rhsusf_acc_su230_mrds_c_3d","rhsusf_acc_su230a", "rhsusf_acc_su230a_3d","rhsusf_acc_su230a_c","rhsusf_acc_su230a_c_3d",
+	"rhsusf_acc_su230a_mrds", "rhsusf_acc_su230a_mrds_3d","rhsusf_acc_su230a_mrds_c", "rhsusf_acc_su230a_mrds_c_3d","rhsusf_acc_SpecterDR", "rhsusf_acc_SpecterDR_3d","rhsusf_acc_SpecterDR_A", "rhsusf_acc_SpecterDR_A_3d",
+	"rhsusf_acc_su230_base_3d", "rhsusf_acc_su230_mrds_base_3d", //Elcan/ SU230
+
+
     "rhs_acc_rakursPM", "rhs_acc_1p87", "rhs_acc_ekp8_18", "rhs_acc_okp7_picatinny", //Russian picatinny
 
     //Misc, for example L1A1 sights or handgun optics
     "rhsgref_acc_l1a1_l2a2", "UK3CB_BAF_SUIT", "rhsgref_mg42_acc_AAsight", "RKSL_optic_RMR_HG", "RKSL_optic_RMR_HG_FDE", "rhs_optic_maaws", "rhs_weap_optic_smaw", 
     
     //Dovetail Optics:
-    "rhs_acc_1p29", "rhs_acc_1p63", "rhs_acc_1p78", "rhs_acc_1pn34", "rhs_acc_nita", //Terrible optics, should be illegal to use.
+    "rhs_acc_1p29", "rhs_acc_1p29_3d", "rhs_acc_1p29_pkp", "rhs_acc_1p29_pkp_3d","rhs_acc_1p29_asval", "rhs_acc_1p29_asval_3d", "rhs_acc_1p63", 
+	"rhs_acc_1p78","rhs_acc_1p78_3d", "rhs_acc_1pn34", "rhs_acc_nita", "rhs_acc_nita","rhs_acc_nita_3d", //Terrible optics, should be illegal to use.
     "rhs_acc_pgo7v3", "rhs_acc_ekp8_02", "rhs_acc_okp7_dovetail", "rhs_acc_pkas", "rhs_acc_pso1m2", "rhs_acc_pso1m21", //Better, many of them are still mid though
     "rhs_acc_pgo7v", "rhs_acc_pgo7v2", "rhs_acc_pgo7v3", "rhs_acc_1pn93_1", "rhs_acc_1pn93_2", //RPG sights
 
